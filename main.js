@@ -1,24 +1,49 @@
-import './style.css'
-import javascriptLogo from './javascript.svg'
-import viteLogo from '/vite.svg'
-import { setupCounter } from './counter.js'
+function mostrar (puntuacion){
+  if (puntuacion >= 3){
+      
+      const divPlantilla = document.createElement('div');
+      divPlantilla.classList.add('containerPlantilla');
+    
+      const listaOrdenada = document.createElement('ol');
+      respuestas.positivas.forEach(respuesta =>{
+          const listaDeRespuestas = document.createElement('li');
+          listaDeRespuestas.classList.add('containerLi');
+          listaDeRespuestas.textContent = respuesta;
+          listaOrdenada.appendChild(listaDeRespuestas)
+   });
+     
+      divPlantilla.appendChild(listaOrdenada);
+      document.getElementById('containerRespuestas').appendChild(divPlantilla);
 
-document.querySelector('#app').innerHTML = `
-  <div>
-    <a href="https://vitejs.dev" target="_blank">
-      <img src="${viteLogo}" class="logo" alt="Vite logo" />
-    </a>
-    <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank">
-      <img src="${javascriptLogo}" class="logo vanilla" alt="JavaScript logo" />
-    </a>
-    <h1>Hello Vite!</h1>
-    <div class="card">
-      <button id="counter" type="button"></button>
-    </div>
-    <p class="read-the-docs">
-      Click on the Vite logo to learn more
-    </p>
-  </div>
-`
+  }else {
+      const divPlantilla = document.createElement('div');
+      divPlantilla.classList.add('containerPlantilla');
+    
+      const listaOrdenada = document.createElement('ul');
+      respuestas.negativas.forEach(respuesta =>{
+          const listaDeRespuestas = document.createElement('li');
+          listaDeRespuestas.classList.add('containerLi');
+          listaDeRespuestas.textContent = respuesta;
+          listaOrdenada.appendChild(listaDeRespuestas)
+   });
+     
+      divPlantilla.appendChild(listaOrdenada);
+      document.getElementById('containerRespuestas').appendChild(divPlantilla);
+  }
+}
 
-setupCounter(document.querySelector('#counter'))
+const respuestas = {
+  
+  positivas :["Gracias por valorarnos, siempre sera un placer atenderlos",
+              "Sus comentarios nos motivan a trabajar con esmero, fue un gusto recibirlos",
+               "Agradecemos tu compra, tu opinion es importante", "Gracias por dejar tu comentario",
+              ],
+
+  negativas : ["Lamentamos que tu experiencia no haya sido la mejor. Nos disculpamos sinceramente por cualquier inconveniente que hayas experimentado",
+               "Esperamos tener la oportunidad de recibirte nuevamente y brindarte una experiencia excepcional",
+               "No dudes en contactarnos directamente", "Gracias por su reseña y lamentamos mucho su experiencia con nosotros",
+              ]
+  
+}
+
+mostrar(1);
