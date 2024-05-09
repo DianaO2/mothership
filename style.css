@@ -6,25 +6,7 @@ body, #app{
   width: 100vw;
   height: 100vh;
 }
-.header{
-  width: 100vw;
-  height: 20vh;
-  padding: 20px;
-  box-sizing: border-box;
-  display: flex;
-  justify-content: right;
-}
-.boton-opiniones{
-  width: 150px;
-  height: 40px;
-  border-radius: 10px;
-  -webkit-border-radius: 10px;
-  -moz-border-radius: 10px;
-  -ms-border-radius: 10px;
-  -o-border-radius: 10px;
-}
 .section-reviews{
-  display: none;
   flex-direction: column;
   justify-content: center;
   align-items: center;
