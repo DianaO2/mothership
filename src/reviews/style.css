@@ -10,13 +10,19 @@ body, #app{
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  gap: 20px;
 }
-.review1, .review2, .review3 {
-  width: 40%;
-  height: 30%;
-}
+
 .container-img-nombre{
   display: flex;
   align-items: flex-start;
   padding-top: 10px;
+}
+.card{
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+  width: 30%;
+  background: red;
 }
