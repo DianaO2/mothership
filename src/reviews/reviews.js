@@ -46,7 +46,7 @@ function reviews() {
   section.insertAdjacentHTML(
     "beforeend",
     cardReview(
-      "/mothership/src/assets/imagenes/Dropdown.png",
+      "https://raw.githubusercontent.com/DianaO2/mothership/erika_reviews/src/assets/imagenes/Dropdown.png",
       "Maria Perez",
       "⭐⭐⭐⭐⭐",
       "Excelente atención, muy amables y cumplidos."
@@ -56,7 +56,7 @@ function reviews() {
   section.insertAdjacentHTML(
     "beforeend",
     cardReview(
-      "/mothership/src/assets/imagenes/Dropdown.png",
+      "https://raw.githubusercontent.com/DianaO2/mothership/erika_reviews/src/assets/imagenes/Dropdown.png",
       "Carlos Cruz",
       "⭐⭐",
       "Muy demorado, tuve una mala experiencia."
@@ -66,7 +66,7 @@ function reviews() {
   section.insertAdjacentHTML(
     "beforeend",
     cardReview(
-      "/mothership/src/assets/imagenes/Dropdown.png",
+      "https://raw.githubusercontent.com/DianaO2/mothership/erika_reviews/src/assets/imagenes/Dropdown.png",
       "Aaron Garcia",
       "⭐⭐⭐⭐",
       "Excelente! todo muy bonito, excelente calidad y atención, Pero se demoro la entrega más tiempo del estimado."
