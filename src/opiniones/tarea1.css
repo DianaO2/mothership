@@ -1,0 +1,27 @@
+#app {
+  text-align: center; /* Centra el contenido */
+  margin-top: 50px; /* Añade un margen superior para separar del borde superior */
+}
+
+.opiniones {
+  padding: 10px 20px;
+  background-color: #ed76f4;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-bottom: 20px; /* Agrega espacio entre el botón y la tarjeta */
+}
+
+.opiniones:hover {
+  background-color: #0056b3;
+}
+
+.containerTarjeta {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 20px;
+  margin-top: 20px;
+  width: 300px;
+  margin: 0 auto; /* Centra la tarjeta horizontalmente */
+}
