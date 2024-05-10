@@ -1,4 +1,5 @@
-function mostrar (puntuacion){
+
+export function mostrar (puntuacion){
     if (puntuacion >= 3){
         
         const divPlantilla = document.createElement('div');
@@ -46,4 +47,4 @@ function mostrar (puntuacion){
     
   }
   
-  mostrar(2);
+  
