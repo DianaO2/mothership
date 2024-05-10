@@ -1,21 +1,5 @@
-/*
-const app = document.getElementById("app")
-
-const boton = document.createElement ("btn")
-boton.classList.add ("opiniones")
-boton.appendChild(app)
-
-
-boton.addEventListener("click",()=>{
-   const tarjeta = document.createElement ("div")
-tarjeta.classList.add ("containerTarjeta") 
-
-
-tarjeta.appendChild(app)  
-})
-*/
-document.addEventListener("DOMContentLoaded", function() {
-  const app = document.getElementById("app");
+export function mostrarOpinion(app){
+ 
 
   // Crear el botón
   const boton = document.createElement("button");
@@ -35,4 +19,6 @@ document.addEventListener("DOMContentLoaded", function() {
       // Agregar la tarjeta al elemento "app"
       app.appendChild(tarjeta);
   });
-});
+
+ 
+}
