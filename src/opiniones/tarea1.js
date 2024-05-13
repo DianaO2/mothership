@@ -18,7 +18,22 @@ export function mostrarOpinion(app){
 
       // Agregar la tarjeta al elemento "app"
       app.appendChild(tarjeta);
+
+// Crear botón de responder
+const botonResponder = document.createElement("button");
+botonResponder.textContent = "Responder";
+botonResponder.classList.add("botonVioleta");
+
+// Crear botón de cancelar
+const botonCancelar = document.createElement("button");
+botonCancelar.textContent = "Cancelar";
+botonCancelar.classList.add("botonBlanco");
+
+
+// Agregar casilla de respuestas y botones debajo de la tarjeta
+app.appendChild(casillaRespuesta);
+app.appendChild(botonResponder);
+app.appendChild(botonCancelar);
   });
 
- 
 }
