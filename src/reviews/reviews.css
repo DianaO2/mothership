@@ -1,28 +1,94 @@
+
 *{
 margin: 0;
 padding: 0;
+box-sizing: border-box;
 }
 body, #app{
   width: 100vw;
   height: 100vh;
 }
-.section-reviews{
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 20px;
-}
+/* .section-reviews{
+  display :flex;
+  width: 100%;
+  flex-direction : row;
+  justify-content:center;
+  align-items:center;
+  gap:20px;
+} */
 
 .container-img-nombre{
   display: flex;
   align-items: flex-start;
   padding-top: 10px;
+  justify-content: center;
 }
 .card{
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
   align-items: center;
-  width: 30%;
-  background: red;
+  width: 291px;
+  height: 362.4px;
+  justify-content: space-evenly;
+  border: 1px solid white;
+  padding: 20px;
+  border-radius: 20px;
+  box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.5);
+  
 }
+.container-text{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 16px;
+}
+.text{
+  color: #6A6A6A;
+}
+.link{
+  text-decoration: none;
+  color:#97509F;
+}
+.swiper{
+  width: 90%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+
+.swiper-wrapper {
+  width: auto; 
+  display: flex;
+  flex-direction: row;
+  width: 85%;
+  height: 390px;
+  justify-content: flex-start;
+  align-items: center;
+  overflow: hidden;
+  position: absolute;
+  gap: 16px;
+  padding: 10px;
+  flex-wrap: nowrap;
+}
+
+.swiper-slide {
+  margin-right: 10px; 
+  width: 290px; 
+  position: relative;
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}  
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+} 
