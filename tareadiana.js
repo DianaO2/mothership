@@ -9,6 +9,10 @@ function mostrar (puntuacion){
             const listaDeRespuestas = document.createElement('li');
             listaDeRespuestas.classList.add('containerLi');
             listaDeRespuestas.textContent = respuesta;
+            const imgcerrar = document.createElement('img');
+            imgcerrar.classList.add('cerrar');
+            imgcerrar.src = "src/img/tag button.svg";
+            listaDeRespuestas.appendChild(imgcerrar);
             listaOrdenada.appendChild(listaDeRespuestas)
      });
        
@@ -24,6 +28,10 @@ function mostrar (puntuacion){
             const listaDeRespuestas = document.createElement('li');
             listaDeRespuestas.classList.add('containerLi');
             listaDeRespuestas.textContent = respuesta;
+            const imgcerrar = document.createElement('img');
+            imgcerrar.classList.add('cerrar');
+            imgcerrar.src = "src/img/tag button.svg";
+            listaDeRespuestas.appendChild(imgcerrar);
             listaOrdenada.appendChild(listaDeRespuestas)
      });
        
@@ -31,12 +39,13 @@ function mostrar (puntuacion){
         document.getElementById('app').appendChild(divPlantilla);
     }
   }
+
   
   const respuestas = {
     
     positivas :["Gracias por valorarnos, siempre sera un placer atenderlos.",
                 "Sus comentarios nos motivan a trabajar con esmero, fue un gusto recibirlos.",
-                 "Agradecemos tu compra, tu opinion es importante", "Gracias por dejar tu comentario.",
+                 "Agradecemos tu compra, tu opinion es importante.", "Gracias por dejar tu comentario.",
                 ],
   
     negativas : ["Lamentamos que tu experiencia no haya sido la mejor. Nos disculpamos sinceramente por cualquier inconveniente que hayas experimentado.",
