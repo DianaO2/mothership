@@ -1,0 +1,28 @@
+*{
+margin: 0;
+padding: 0;
+}
+body, #app{
+  width: 100vw;
+  height: 100vh;
+}
+.section-reviews{
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.container-img-nombre{
+  display: flex;
+  align-items: flex-start;
+  padding-top: 10px;
+}
+.card{
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+  width: 30%;
+  background: red;
+}

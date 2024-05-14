@@ -1,3 +1,4 @@
+
 *{
   margin: 0;
 }
@@ -14,12 +15,6 @@
   display:inline-flex;
   border-radius: 65px;
   border: 1px solid #8A6DFF;
-  height: 30px;
-  /* padding: 15px 10px 15px 16px; */
-  justify-content: center;
-  align-items: center;
-  gap: 5px;
-  
   margin-block-start: 8px;
   list-style: none;
   /* estilos del texto */
