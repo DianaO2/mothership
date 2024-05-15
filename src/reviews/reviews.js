@@ -26,84 +26,89 @@ const cardReview = (
 };
 function elements(app) {
   const section = document.createElement("section");
-  // const swiperContainer = document.createElement("div");
   const swiperWrapper = document.createElement("div");
-  // const slideshow = document.createElement("div");
-  const btnPrev = document.createElement("div");
   const btnNext = document.createElement("div");
-  const scroball = document.createElement("div");
- 
+  const btnPrev = document.createElement("div");
+  
   // Creación de clases
   section.classList.add("swiper");
-  // swiperContainer.classList.add("swiper-container")
   swiperWrapper.classList.add("swiper-wrapper");
-  // slideshow.classList.add("slideShow");
-  btnPrev.classList.add("swiper-button-prev");
   btnNext.classList.add("swiper-button-next");
-  scroball.classList.add("swiper-scrollbar");
-
-  // swiperWrapper.appendChild(slideshow)
+  btnPrev.classList.add("swiper-button-prev");
   
   section.appendChild(swiperWrapper)
-  section.appendChild(btnPrev)
   section.appendChild(btnNext)
-  section.appendChild(scroball)
-  
-  // section.appendChild(swiperWrapper)
+  section.appendChild(btnPrev)
+
   const createApp = app.appendChild(section);
   return createApp;
 }
+
 function reviews() {
   const slideShow = document.querySelector(".swiper-wrapper");
 
-  slideShow.insertAdjacentHTML("beforeend", cardReview(
-    "https://raw.githubusercontent.com/DianaO2/mothership/erika_reviews/src/assets/imagenes/Dropdown.png",
-    "Maria Perez",
-    "⭐⭐⭐⭐⭐",
-    "Excelente atención, muy amables y cumplidos."
-  ))
-  slideShow.insertAdjacentHTML("beforeend", cardReview(
-    "https://raw.githubusercontent.com/DianaO2/mothership/erika_reviews/src/assets/imagenes/Dropdown.png",
-    "Carlos Cruz",
-    "⭐⭐",
-    "Muy demorado, tuve una mala experiencia."
-  ));
-  slideShow.insertAdjacentHTML("beforeend",cardReview(
-    "https://raw.githubusercontent.com/DianaO2/mothership/erika_reviews/src/assets/imagenes/Dropdown.png",
-    "Aaron Garcia",
-    "⭐⭐⭐⭐",
-    "Excelente! todo muy bonito, excelente calidad y atención, Pero se demoro la entrega más tiempo del estimado."
-  ));
-  slideShow.insertAdjacentHTML("beforeend",cardReview(
-    "https://raw.githubusercontent.com/DianaO2/mothership/erika_reviews/src/assets/imagenes/Dropdown.png",
-    "Maria Guerrero",
-    "⭐⭐⭐",
-    "Excelente! todo muy bonito, excelente calidad y atención, Pero se demoro la entrega más tiempo del estimado."
-  ));
-  slideShow.insertAdjacentHTML("beforeend",cardReview(
-    "https://raw.githubusercontent.com/DianaO2/mothership/erika_reviews/src/assets/imagenes/Dropdown.png",
-    "Luisa Galeno",
-    "⭐⭐⭐⭐",
-    "muy bonito, Pero se demoro la entrega más tiempo del estimado."
-  ));
-  slideShow.insertAdjacentHTML("beforeend",cardReview(
-    "https://raw.githubusercontent.com/DianaO2/mothership/erika_reviews/src/assets/imagenes/Dropdown.png",
-    "Marcos Garzón",
-    "⭐⭐⭐⭐⭐",
-    "Excelente! todo muy bonito, excelente calidad y atención, Pero se demoro la entrega más tiempo del estimado."
-  ));
-  slideShow.insertAdjacentHTML("beforeend",cardReview(
-    "https://raw.githubusercontent.com/DianaO2/mothership/erika_reviews/src/assets/imagenes/Dropdown.png",
-    "Luciano Duarte",
-    "⭐",
-    "Se demoro la entrega más tiempo del estimado."
-  ));
-  slideShow.insertAdjacentHTML("beforeend",cardReview(
-    "https://raw.githubusercontent.com/DianaO2/mothership/erika_reviews/src/assets/imagenes/Dropdown.png",
-    "Linda Patrón",
-    "⭐⭐",
-    "No me gusto la atención"
-  ));
+  // Array de objetos que contiene la información de cada review
+  const reviewsData = [
+    {
+      imgUrl: "https://raw.githubusercontent.com/DianaO2/mothership/erika_reviews/src/assets/imagenes/Dropdown.png",
+      name: "Maria Perez",
+      rating: "⭐⭐⭐⭐⭐",
+      comment: "Excelente atención, muy amables y cumplidos."
+    },
+    {
+      imgUrl: "https://raw.githubusercontent.com/DianaO2/mothership/erika_reviews/src/assets/imagenes/Dropdown.png",
+      name: "Carlos Diaz",
+      rating: "⭐⭐",
+      comment: "Muy demorado, tuve una mala experiencia."
+    },
+    {
+      imgUrl: "https://raw.githubusercontent.com/DianaO2/mothership/erika_reviews/src/assets/imagenes/Dropdown.png",
+      name: "Aaron Garcia",
+      rating:"⭐⭐⭐⭐",
+      comment: "Excelente! todo muy bonito, excelente calidad y atención, Pero se demoro la entrega más tiempo del estimado."
+    },
+    {
+      imgUrl: "https://raw.githubusercontent.com/DianaO2/mothership/erika_reviews/src/assets/imagenes/Dropdown.png",
+      name: "Maria Guerrero",
+      rating: "⭐⭐⭐",
+      comment:"Excelente! todo muy bonito, excelente calidad y atención, Pero se demoro la entrega más tiempo del estimado."
+    },
+    {
+      imgUrl: "https://raw.githubusercontent.com/DianaO2/mothership/erika_reviews/src/assets/imagenes/Dropdown.png",
+      name: "Luisa Galeno",
+      rating: "⭐⭐⭐⭐",
+      comment:  "muy bonito, Pero se demoro la entrega más tiempo del estimado."
+    },
+    {
+      imgUrl: "https://raw.githubusercontent.com/DianaO2/mothership/erika_reviews/src/assets/imagenes/Dropdown.png",
+      name: "Marcos Garzón",
+      rating:"⭐⭐⭐⭐⭐",
+      comment:"Excelente! todo muy bonito, excelente calidad y atención, Pero se demoro la entrega más tiempo del estimado."
+    },
+    {
+      imgUrl: "https://raw.githubusercontent.com/DianaO2/mothership/erika_reviews/src/assets/imagenes/Dropdown.png",
+      name:"Luciano Duarte",
+      rating:"⭐",
+      comment:"Se demoro la entrega más tiempo del estimado."
+    },
+    {
+      imgUrl:"https://raw.githubusercontent.com/DianaO2/mothership/erika_reviews/src/assets/imagenes/Dropdown.png",
+      name:"Linda Patrón",
+      rating:"⭐⭐",
+      comment:"No me gusto la atención"
+    },
+    {
+      imgUrl:"https://raw.githubusercontent.com/DianaO2/mothership/erika_reviews/src/assets/imagenes/Dropdown.png",
+      name:"Julio Patrón",
+      rating:"⭐⭐⭐",
+      comment:"Me gusto la atención"
+    }
+  ];
+
+  // Itera sobre el array de objetos y crea el HTML para cada review
+  reviewsData.forEach(review => {
+    slideShow.insertAdjacentHTML("beforeend", cardReview(review.imgUrl, review.name, review.rating, review.comment));
+  });
 }
 
 export {cardReview, elements, reviews };

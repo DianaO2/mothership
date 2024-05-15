@@ -1,27 +1,40 @@
 import "./reviews.css";
 
 export function initializeSwiperComponent() {
-    new Swiper(".swipper-wrapper", {
-        loopPreventsSliding:false,
-        direction: "horizontal", // Cambiar a horizonta
-        effect:"cards",
-        centeredSlides: true,
-        slidesPerView: 3, // Mostrar 3 slides a la vez
-        spaceBetween: 3,
-        a11y: {
-            prevSlideMessage: 'Previous slide',
-            nextSlideMessage: 'Next slide',
-          },
-        navigation: {
-            prevEl: ".swiper-button-prev",
-            nextEl: ".swiper-button-next",
-           
+  const swiper = new Swiper(".swiper", {
+    // Optional parameters
+    direction: "horizontal",
+    loop:true,
+    enabled: true,
+    loopedSlides: 3,
+    slidesPerView: 3,
+    slidesPerGroup: 3,
+    spaceBetween: 0,
+    mousewheel: {
+        invert: true,
+    },
+    // Navigation arrows
+    navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
         
-            
+    },
+    breakpoints: {
+      // when window width is >= 320px
+        320: {
+        slidesPerView: 1,
+        spaceBetween: 20,
         },
-       
-    });
-    
+      // when window width is >= 480px
+        480: {
+        slidesPerView: 1,
+        spaceBetween: 30,
+        },
+      // when window width is >= 640px
+        640: {
+        slidesPerView: 3,
+        spaceBetween: 40,
+        },
+    },
+  });
 }
-
-
