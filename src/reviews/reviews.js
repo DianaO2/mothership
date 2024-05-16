@@ -1,11 +1,12 @@
 const cardReview = (
+  id,
   src,
   nombre,
   estrellas,
   texto
 ) => {
   const card = `
-          <div class="swiper-slide">
+          <div class="swiper-slide" id="${id}">
             <div class="card">
               <div class="container-img-nombre">
                   <img src=${src} alt="foto de perfil" class="slideshow-img"/>
@@ -104,11 +105,14 @@ function reviews() {
       comment:"Me gusto la atención"
     }
   ];
-
+ 
   // Itera sobre el array de objetos y crea el HTML para cada review
-  reviewsData.forEach(review => {
-    slideShow.insertAdjacentHTML("beforeend", cardReview(review.imgUrl, review.name, review.rating, review.comment));
-  });
+  reviewsData.forEach((review, index )=> {
+    const id = `review${index + 1}`;
+      slideShow.insertAdjacentHTML("beforeend", cardReview(id, review.imgUrl, review.name, review.rating, review.comment));
+    });
+  const datos =  JSON.stringify(reviewsData)
+  localStorage.setItem("review", datos);
 }
 
 export {cardReview, elements, reviews };

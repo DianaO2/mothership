@@ -10,6 +10,7 @@ export function initializeSwiperComponent() {
     slidesPerView: 3,
     slidesPerGroup: 3,
     spaceBetween: 0,
+    centeredSlides:true,
     mousewheel: {
         invert: true,
     },
