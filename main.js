@@ -13,6 +13,6 @@ elements(app);
 
 reviews();
 initializeSwiperComponent();
-mostrarOpinion();
+mostrarOpinion(app);
 mostrar(2);
 
