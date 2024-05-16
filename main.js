@@ -11,6 +11,8 @@ const app = document.getElementById('app');
 elements(app);
 // Llama a la función reviews después de haber agregado los elementos al DOM
 reviews();
-mostrarOpinion();
+mostrarOpinion(app);
 mostrar(2);
+
+
 
