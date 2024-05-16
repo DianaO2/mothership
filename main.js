@@ -1,5 +1,5 @@
 import {elements, reviews} from "./src/reviews/reviews.js";
-import {mostrar} from "./tareadiana.js";
+import {mostrar} from "./src/respuestas/tareadiana.js";
 import {initializeSwiperComponent} from "./src/reviews/carrusel.js"
 import { mostrarOpinion } from "./src/opiniones/tarea1.js";
 
@@ -15,4 +15,6 @@ reviews();
 initializeSwiperComponent();
 mostrarOpinion(app);
 mostrar(2);
+
+
 
