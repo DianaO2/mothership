@@ -1,16 +1,26 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+#app{
+    margin: 0;
+    padding: 0;
+}
+header {
+    margin: 0;
+    height: 20vh;
+    font-family:Monse;
+}
+
 .navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 10px 20px;
     background-color: #fff;
-    border-bottom: 1px solid #ddd;
 }
 
 .logo {
-    font-size: 24px;
-    font-weight: bold;
-    
+    width: 200px;
+    height: 39.75px;
+
 }
 
 .menu {
@@ -24,15 +34,25 @@
 .menu-item {
     margin-left: 20px;
 }
-
-.menu-item a {
-    text-decoration: none;
-    color: #000;
+.menu-item a{
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+    padding-bottom: 5px; 
+    color: #475467;
     font-size: 16px;
+    line-height: 24px;
+    text-align: left;
 }
 
-.menu-item a:hover {
-    text-decoration: underline;
+.menu-item a{
+    text-decoration: none;
+}
+.menu-item a:hover,
+.menu-item a.active {
+    text-decoration: none;
+    border-bottom: 3px solid black; /* Line thickness and color */
 }
 
 .dropdown {
@@ -43,11 +63,19 @@
     background-color: #fff;
     border: none;
     cursor: pointer;
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+    padding-bottom: 5px; 
+    color: #475467;
     font-size: 16px;
+    line-height: 24px;
 }
 
 .dropdown-content {
     display: none;
+    right: 26px;
     position: absolute;
     background-color: #fff;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
@@ -62,7 +90,7 @@
 }
 
 .dropdown-content a {
-    color: black;
+    color: #475467;
     padding: 12px 16px;
     text-decoration: none;
     display: block;
