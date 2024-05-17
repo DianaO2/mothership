@@ -1,0 +1,55 @@
+* {
+  margin: 0;
+}
+
+.contenedorPrincipal {
+  border-block-start: 3px solid #34A853;
+ 
+  height: 5.146px;
+  align-self: stretch;
+  display: flex;
+  width: 411.445px;
+  height: 120.854px;
+  padding: 20.586px 30.879px;
+  justify-content:space-around;
+  align-items: center;
+  gap: 15.439px;
+  box-sizing: border-box ;
+
+  border-radius: 10.293px;
+  background: #FFF;
+  box-shadow: -5.146px -2.573px 20.586px 0px rgba(0, 0, 0, 0.08), 25.732px 18.013px 51.464px 0px rgba(0, 0, 0, 0.08);
+}
+
+.logoGoggle{
+  width: 80.413px;
+  height: 80.413px;
+  flex-shrink: 0;
+}
+
+.containerEstrellas{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10.293px;
+}
+
+.tituloGoogle {
+  color:  #6A6A6A;
+  text-align: center;
+  font-family: "Plus Jakarta Sans";
+  font-size: 20.586px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 20.586px; /* 100% */
+}
+
+.puntos{
+  color: #FEA500;
+  text-align: center;
+  font-family: "Plus Jakarta Sans";
+  font-size: 30.879px;
+  font-style: normal;
+  font-weight: 800;
+  line-height: 30.879px; /* 100% */
+}
