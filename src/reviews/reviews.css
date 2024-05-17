@@ -8,14 +8,6 @@ body, #app{
   width: 100vw;
   height: 100vh;
 }
-/* .section-reviews{
-  display :flex;
-  width: 100%;
-  flex-direction : row;
-  justify-content:center;
-  align-items:center;
-  gap:20px;
-} */
 
 .container-img-nombre{
   display: flex;
