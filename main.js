@@ -9,7 +9,7 @@ import { mostrarRating } from "./src/rating/rating.js";
 const app = document.getElementById('app');
 header(app)
 // Creación de los elementos del DOM
-mostrarRating(0.5, app);
+mostrarRating(4.8, app);
 elements(app);
 // Llama a la función reviews después de haber agregado los elementos al DOM
 const opiniones = document.getElementById("opiniones");
