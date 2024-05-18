@@ -1,3 +1,5 @@
+import { mostrarOpinion } from "../opiniones/tarea1";
+import {mostrar } from "../respuestas/tareadiana"
 const cardReview = (
   id,
   src,
@@ -111,30 +113,53 @@ function reviews() {
       const id = `review${index + 1}`;
       slideShow.insertAdjacentHTML("beforeend", cardReview(id, review.imgUrl, review.name, review.rating, review.comment));
     });
-    const cards = document.querySelectorAll(".card");
-    if(cards.length > 0 ){
-      cards.forEach((elemnt)=>{
-        elemnt.addEventListener("click", (e)=>{
-          const comment = elemnt.querySelector(".text").textContent;
-          const imgUrl = elemnt.querySelector(".slideshow-img").src;
-          const rating = elemnt.querySelector(".rating").textContent;
+    // const cards = document.querySelectorAll(".card");
+    // if(cards.length > 0 ){
+    //   cards.forEach((elemnt)=>{
+    //     elemnt.addEventListener("click", (e)=>{
+    //       const comment = elemnt.querySelector(".text").textContent;
+    //       const imgUrl = elemnt.querySelector(".slideshow-img").src;
+    //       const rating = elemnt.querySelector(".rating").textContent;
     
-          const review = {
-            comment: comment,
-            imagen: imgUrl,
-            rating: rating
-          }
-          const datos =  JSON.stringify(review)
-          const reviewCard = localStorage.setItem("review", datos);
-          const review1 = localStorage.getItem("review")
-          const comentario = JSON.parse(review1);
-          const comentarios = comentario.comment;
-          const imagen = comentario.imgUrl;
-          const rating1 = comentario.rating;
+    //       const review = {
+    //         comment: comment,
+    //         imagen: imgUrl,
+    //         rating: rating
+    //       }
+    //       const datos =  JSON.stringify(review)
+    //       const reviewCard = localStorage.setItem("review", datos);
+    //       const review1 = localStorage.getItem("review")
+    //       const comentario = JSON.parse(review1);
+    //       const comentarios = comentario.comment;
+    //       const imagen = comentario.imgUrl;
+    //       const rating1 = comentario.rating;
 
-        });
+    //     });
+    //   });
+    // }
+    const cards = document.querySelectorAll(".card");
+  if (cards.length > 0) {
+    cards.forEach((element) => {
+      element.addEventListener("click", (e) => {
+        const comment = element.querySelector(".text").textContent;
+        const imgUrl = element.querySelector(".slideshow-img").src;
+        const rating = element.querySelector(".rating").textContent;
+        
+        const review = {
+          comment: comment,
+          imagen: imgUrl,
+          rating: rating
+        };
+
+        // Guarda los datos de la opinión seleccionada en localStorage
+        localStorage.setItem("selectedReview", JSON.stringify(review));
+
+        // Llama a la función mostrarOpinion con los datos de la opinión seleccionada
+        mostrarOpinion(app, review.comment, review.imgUrl, review.rating);
+        mostrar(2)
       });
-    }
+    });
+  }
   
 }
 
