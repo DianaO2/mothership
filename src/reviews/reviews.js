@@ -1,3 +1,5 @@
+import { mostrarOpinion } from "../opiniones/tarea1";
+import {mostrar } from "../respuestas/tareadiana"
 const cardReview = (
   id,
   src,
@@ -6,13 +8,13 @@ const cardReview = (
   texto
 ) => {
   const card = `
-          <div class="swiper-slide" id="${id}">
-            <div class="card">
+          <div class="swiper-slide" >
+            <div class="card" data-id="${id}">
               <div class="container-img-nombre">
                   <img src=${src} alt="foto de perfil" class="slideshow-img"/>
               </div>
               <div>
-                  <p>${estrellas}</p>
+                  <p class="rating">${estrellas}</p>
               </div>
               <div class="container-text">
                 <p class="text">${texto}</p>
@@ -108,11 +110,57 @@ function reviews() {
  
   // Itera sobre el array de objetos y crea el HTML para cada review
   reviewsData.forEach((review, index )=> {
-    const id = `review${index + 1}`;
+      const id = `review${index + 1}`;
       slideShow.insertAdjacentHTML("beforeend", cardReview(id, review.imgUrl, review.name, review.rating, review.comment));
     });
-  const datos =  JSON.stringify(reviewsData)
-  localStorage.setItem("review", datos);
+    // const cards = document.querySelectorAll(".card");
+    // if(cards.length > 0 ){
+    //   cards.forEach((elemnt)=>{
+    //     elemnt.addEventListener("click", (e)=>{
+    //       const comment = elemnt.querySelector(".text").textContent;
+    //       const imgUrl = elemnt.querySelector(".slideshow-img").src;
+    //       const rating = elemnt.querySelector(".rating").textContent;
+    
+    //       const review = {
+    //         comment: comment,
+    //         imagen: imgUrl,
+    //         rating: rating
+    //       }
+    //       const datos =  JSON.stringify(review)
+    //       const reviewCard = localStorage.setItem("review", datos);
+    //       const review1 = localStorage.getItem("review")
+    //       const comentario = JSON.parse(review1);
+    //       const comentarios = comentario.comment;
+    //       const imagen = comentario.imgUrl;
+    //       const rating1 = comentario.rating;
+
+    //     });
+    //   });
+    // }
+    const cards = document.querySelectorAll(".card");
+  if (cards.length > 0) {
+    cards.forEach((element) => {
+      element.addEventListener("click", (e) => {
+        const comment = element.querySelector(".text").textContent;
+        const imgUrl = element.querySelector(".slideshow-img").src;
+        const rating = element.querySelector(".rating").textContent;
+        
+        const review = {
+          comment: comment,
+          imagen: imgUrl,
+          rating: rating
+        };
+
+        // Guarda los datos de la opinión seleccionada en localStorage
+        localStorage.setItem("selectedReview", JSON.stringify(review));
+
+        // Llama a la función mostrarOpinion con los datos de la opinión seleccionada
+        mostrarOpinion(app, review.comment, review.imgUrl, review.rating);
+        mostrar(2)
+      });
+    });
+  }
+  
 }
 
 export {cardReview, elements, reviews };
