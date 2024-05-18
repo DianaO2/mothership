@@ -1,24 +1,43 @@
-export function mostrarOpinion(app){
+// Crear la tarjeta
+
+const cardReview = (
+ comentario,imagen,rating
+) => {
+  const card = `
+            <div class="card">
+              <div class="imagen-tarjeta">
+                  <img src=${imagen} alt="foto de perfil" class="slideshow-img"/>
+              </div>
+              <div class="text-rating">
+                  <p>${rating}</p>
+                  <p class="text">${comentario}</p>
+              </div>               
+            </div>
+          </div>
+      `;
+  return card;
+};
+
+export function mostrarOpinion(app,comentario,imagen,rating){
+  
+  const tarjeta = document.createElement("div");
+  tarjeta.classList.add("container-card")
+  
+  
+ 
+ tarjeta.insertAdjacentHTML("beforeend", cardReview(comentario,imagen,rating))
+ app.appendChild(tarjeta)
+
+
+
  
 
-  // Crear el botón
-  const boton = document.createElement("button");
-  boton.textContent = "Mostrar Opinión";
-  boton.classList.add("opiniones");
+  }
 
-  // Agregar el botón al elemento "app"
-  app.appendChild(boton);
 
-  // Agregar evento de clic al botón
-  boton.addEventListener("click", () => {
-      // Crear la tarjeta
-      const tarjeta = document.createElement("div");
-      tarjeta.classList.add("containerTarjeta");
-      tarjeta.textContent = "aqui se muestra la opinion";
+  
 
-      // Agregar la tarjeta al elemento "app"
-      app.appendChild(tarjeta);
-
+/*
 // Crear botón de responder
 const botonResponder = document.createElement("button");
 botonResponder.textContent = "Responder";
@@ -34,6 +53,5 @@ botonCancelar.classList.add("botonBlanco");
 app.appendChild(casillaRespuesta);
 app.appendChild(botonResponder);
 app.appendChild(botonCancelar);
-  });
+  };*/
 
-}
