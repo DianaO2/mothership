@@ -15,13 +15,6 @@ elements(app);
 const opiniones = document.getElementById("opiniones");
 opiniones.addEventListener("click", reviews);
 
-const cards = document.querySelectorAll(".swiper-slide");
-cards.forEach((card)=>{
-    card.addEventListener("click", (e)=>{
-        const id= e.target;
-        console.log(id)
-    })
-})
 
 
 
