@@ -8,28 +8,39 @@ export function mostrarRating (puntaje, app ){
     const logoGoogle = document.createElement('img')
     logoGoogle.classList.add('logoGoggle')
     logoGoogle.src = 'src/img/Google.svg'
-    // contenedor de puntuacion y estrellas
+
+    // contenedor del tìtulo, puntuacion y estrellas
     const containerPyE = document.createElement('div')
     containerPyE.classList.add('containerEstrellas')
-
+   
     const titulo = document.createElement('h3')
     titulo.classList.add('tituloGoogle')
     titulo.textContent = 'Google Rating'
-    containerPyE.appendChild(titulo)
-
+    containerPyE.append(titulo)
+  
+    // contenedor del nùmero y imagen de estrellas
+    const containerNyImg = document.createElement('div')
+    containerNyImg.classList.add('containerNyImg')
     const puntuacion = document.createElement('h2')
     puntuacion.classList.add('puntos')
     puntuacion.textContent = puntaje
-    containerPyE.appendChild(puntuacion)
+    containerNyImg.appendChild(puntuacion)
+    
 
-    if (puntaje >= 1 || puntaje < 1){
-        const estrella = document.createElement('img')
-        estrella.classList.add('estrella')
-        estrella.src = 'src/img/Star.svg'
-        containerPyE.appendChild(estrella)
-    }
+        if (puntaje <= 5){
+            for(let x = 1; x <= puntaje; x++){
+                const estrella = document.createElement('img')
+                estrella.classList.add('estrella')
+                estrella.src = 'src/img/Star.svg'
+                containerNyImg.appendChild(estrella)
+            }
+        }else {
+        console.log('supera el lìmite de estrellas por puntuacion maxima')
+        }
 
+containerPyE.appendChild(containerNyImg)
 contenedorPrincipal.appendChild(logoGoogle)
+
 contenedorPrincipal.appendChild(containerPyE)
 app.appendChild(contenedorPrincipal)
 
