@@ -3,6 +3,7 @@
 const cardReview = (
  comentario,imagen,rating) => {
   const card = `
+  <div class="contenedor-Principal">
     <div class="contenedor-card">
       <div class="card-respuesta"
                <div class="imagen-tarjeta">
@@ -14,16 +15,21 @@ const cardReview = (
           </div> <br><br><br><br><br>
        <div class="cuadro">
        <div class="imagen-tarjeta">
-       <img src="opiniones/imagen/2.jpg  alt="foto de perfil"/>
+       <img src="" alt="foto de perfil"/>
      </div>
            <p>Nombre del emprendimiento</p>
           <div class="responder"> 
             <div class="gracias-opinion"> 
             <p>Gracias por dejarnos tu opinión</p>
-          </div>    
+          </div> 
+           <div class="responder-1">
+            <button class="btn-responder">Responder</button>
+            <button class="btn-cancelar">Cancelar</button>
+            </div>  
         </div>
       </div>
     </div> 
+  </div> 
    `;
   return card;
 };
@@ -36,20 +42,3 @@ app.appendChild(tarjeta)
 
 
   
-/*// Crear botón de responder
-const botonResponder = document.createElement("button");
-botonResponder.textContent = "Responder";
-botonResponder.classList.add("botonVioleta");*/
-
-/*// Crear botón de cancelar
-const botonCancelar = document.createElement("button");
-botonCancelar.textContent = "Cancelar";
-botonCancelar.classList.add("botonBlanco");
-
-
-// Agregar casilla de respuestas y botones debajo de la tarjeta
-app.appendChild(casillaRespuesta);
-app.appendChild(botonResponder);
-app.appendChild(botonCancelar);
-  
-*/

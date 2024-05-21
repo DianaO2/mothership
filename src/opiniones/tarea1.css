@@ -2,21 +2,28 @@
   text-align: center; 
   margin-top: 50px; /*Añade un margen superior para separar del borde superior */
 }
-
-.contenedor-card {
-padding: 60.88px 0px 0px 0px;
-border-radius: 15.22px 0px 0px 0px;
+.contenedor-Principal{
+width: 856px;
+height: 669px;
+top: 779px;
+padding: 60px 60px 60px 60px;
+gap: 13px;
+border-radius: 15.22px 15px 15px 15px;
 opacity: 0px;
 background: #FFFFFF;
-box-shadow: 0px 4px 4px 0px #00000040;
-margin: 0 auto; /* Centra la tarjeta horizontalmente */
+box-shadow: 4px 4px 4px 4px #00000040;
+margin: 0 auto;
+}
+.contenedor-card {
+margin: 0 auto; 
 }
 .card-respuesta{
 width: 40px;
 height: 60px;
+margin-bottom: 5%;
 }
 .imagen-tarjeta img {
-  display: flex;
+display: flex;
 }
 .text-rating {
 display: flex;
@@ -24,47 +31,33 @@ top: 67.8px;
 left: 159.13px;
 gap: 14.87px;
 opacity: 0px;
-
 }
 .text {
 font-family: Plus Jakarta Sans;
 font-size: 16.6px;
-text-align:left;
 }
 
 .cuadro{
-top: 312.72px;
-left: 159.13px;
-gap: 8.3px;
-opacity: 0px;
-}
-.cuadro >p{
-width: 290px;
-height: 28px;
-gap: 0px;
-opacity: 0px;
+width: 80%;
 font-family: Montserrat;
 font-size: 19.37px;
 font-weight: 500;
 line-height: 27.67px;
 text-align: left;
 color: #344054;
+margin: 0 auto;
 }
 .responder{
-  top: 312.72px;
-  left: 159.13px;
-  gap: 8.3px;
-  opacity: 0px;
-  background: #FFFFFF;
-  border: 1.38px solid #D0D5DD;
-  box-shadow: 0px 1.38px 2.77px 0px #1018280D;
+top: 312.72px;
+left: 159.13px;
+gap: 8.3px;
+opacity: 0px;
+box-shadow: 0px 1.38px 2.77px 0px #1018280D;
 }
 .gracias-opinion{
-
 padding: 13.84px 19.37px 13.84px 19.37px;
 gap: 11.07px;
-border-radius: 11.07px 0px 0px 0px;
-border: 1.38px 0px 0px 0px;
+border-radius: 10px 10px 10px 10px;
 opacity: 0px;
 background: #FFFFFF;
 border: 1.38px solid #D0D5DD;
@@ -83,20 +76,28 @@ text-align: left;
 color: #667085;
 }
 
-/*
-.opiniones {
-  padding: 10px 20px;
-  background-color: #9b19b5f7;
-  color: white;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  margin-bottom: 20px; 
+.btn-responder{
+margin-top: 18px; 
+margin-bottom: 10%;
+width: 140px;
+color: #FFFFFF;
+padding: 15.36px 26.88px 15.36px 26.88px;
+border-radius: 8px;
+background: #7F56D9;
+border: 0.96px solid #7F56D9
 }
 
-.opiniones:hover {
-  background-color: #9b19b5f7;
+.btn-cancelar{
+margin-top: 18px;
+margin-bottom: 10% ;
+width: 140px;
+color: #344054;
+padding: 15.36px 26.88px 15.36px 26.88px;
+border-radius: 8px;
+background: #FFFFFF;
+border: 0.96px solid #FFFFFF
 }
+
 
 
 
