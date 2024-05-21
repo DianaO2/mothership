@@ -10,12 +10,12 @@ const cardReview = (
                  <img src=${imagen} alt="foto de perfil" class="slideshow-img"/>
                </div>
           <div class="text-rating">
-            <p>${rating}</p>
+            <p class="img-estrella">${rating}</p>
             <p class="text">${comentario}</p>
           </div> <br><br><br><br><br>
        <div class="cuadro">
        <div class="imagen-tarjeta">
-       <img src="" alt="foto de perfil"/>
+       <img src="src/imagen/2.jpeg" alt="foto de perfil"/>
      </div>
            <p>Nombre del emprendimiento</p>
           <div class="responder"> 
