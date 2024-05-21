@@ -69,20 +69,20 @@ async function reviews(){
       cards.forEach((element) => {
         element.addEventListener("click", (e) => {
           const comment = element.querySelector(".text").textContent;
-          const imgUrl = element.querySelector(".slideshow-img").src;
+          const imgUrl = element.querySelector(".slideshow-img");
           const stars = element.querySelector(".stars").textContent;
-          console.log(imgUrl)
+         
           const review = {
             comment: comment,
-            imagen: imgUrl,
+            imagen: imgUrl.src,
             rating: stars
           };
-    
+          console.log(review.imagen)
           // Guarda los datos de la opinión seleccionada en localStorage
           localStorage.setItem("selectedReview", JSON.stringify(review));
-          console.log(review.rating)
+         
           // Llama a la función mostrarOpinion con los datos de la opinión seleccionada
-          mostrarOpinion(app, review.comment, review.imgUrl, review.rating);
+          mostrarOpinion(app, review.comment, review.imagen, review.rating);
           mostrar(2)
         });
       });
