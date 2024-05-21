@@ -1,5 +1,6 @@
 import { mostrarOpinion } from "../opiniones/tarea1";
 import {mostrar } from "../respuestas/tareadiana"
+import { drawStar } from "./drawStar";
 const cardReview = (
   id,
   src,
@@ -13,9 +14,7 @@ const cardReview = (
               <div class="container-img-nombre">
                   <img src=${src} alt="foto de perfil" class="slideshow-img"/>
               </div>
-              <div>
-                  <p class="rating">${estrellas}</p>
-              </div>
+                <span class="stars">${estrellas}</span>
               <div class="container-text">
                 <p class="text">${texto}</p>
                 <p class="text">from: ${nombre}</p>
@@ -27,6 +26,7 @@ const cardReview = (
       `;
   return card;
 };
+
 function elements(app) {
   const section = document.createElement("section");
   const swiperWrapper = document.createElement("div");
@@ -47,120 +47,45 @@ function elements(app) {
   return createApp;
 }
 
-function reviews() {
+async function reviews(){
   const slideShow = document.querySelector(".swiper-wrapper");
+    try{
+      const response = await fetch("https://mocki.io/v1/b29fad5b-4d51-483a-a116-91880e9774cf")
+      const reviews = await response.json();
 
-  // Array de objetos que contiene la información de cada review
-  const reviewsData = [
-    {
-      imgUrl: "https://raw.githubusercontent.com/DianaO2/mothership/erika_reviews/src/assets/imagenes/Dropdown.png",
-      name: "Maria Perez",
-      rating: "⭐⭐⭐⭐⭐",
-      comment: "Excelente atención, muy amables y cumplidos."
-    },
-    {
-      imgUrl: "https://raw.githubusercontent.com/DianaO2/mothership/erika_reviews/src/assets/imagenes/Dropdown.png",
-      name: "Carlos Diaz",
-      rating: "⭐⭐",
-      comment: "Muy demorado, tuve una mala experiencia."
-    },
-    {
-      imgUrl: "https://raw.githubusercontent.com/DianaO2/mothership/erika_reviews/src/assets/imagenes/Dropdown.png",
-      name: "Aaron Garcia",
-      rating:"⭐⭐⭐⭐",
-      comment: "Excelente! todo muy bonito, excelente calidad y atención, Pero se demoro la entrega más tiempo del estimado."
-    },
-    {
-      imgUrl: "https://raw.githubusercontent.com/DianaO2/mothership/erika_reviews/src/assets/imagenes/Dropdown.png",
-      name: "Maria Guerrero",
-      rating: "⭐⭐⭐",
-      comment:"Excelente! todo muy bonito, excelente calidad y atención, Pero se demoro la entrega más tiempo del estimado."
-    },
-    {
-      imgUrl: "https://raw.githubusercontent.com/DianaO2/mothership/erika_reviews/src/assets/imagenes/Dropdown.png",
-      name: "Luisa Galeno",
-      rating: "⭐⭐⭐⭐",
-      comment:  "muy bonito, Pero se demoro la entrega más tiempo del estimado."
-    },
-    {
-      imgUrl: "https://raw.githubusercontent.com/DianaO2/mothership/erika_reviews/src/assets/imagenes/Dropdown.png",
-      name: "Marcos Garzón",
-      rating:"⭐⭐⭐⭐⭐",
-      comment:"Excelente! todo muy bonito, excelente calidad y atención, Pero se demoro la entrega más tiempo del estimado."
-    },
-    {
-      imgUrl: "https://raw.githubusercontent.com/DianaO2/mothership/erika_reviews/src/assets/imagenes/Dropdown.png",
-      name:"Luciano Duarte",
-      rating:"⭐",
-      comment:"Se demoro la entrega más tiempo del estimado."
-    },
-    {
-      imgUrl:"https://raw.githubusercontent.com/DianaO2/mothership/erika_reviews/src/assets/imagenes/Dropdown.png",
-      name:"Linda Patrón",
-      rating:"⭐⭐",
-      comment:"No me gusto la atención"
-    },
-    {
-      imgUrl:"https://raw.githubusercontent.com/DianaO2/mothership/erika_reviews/src/assets/imagenes/Dropdown.png",
-      name:"Julio Patrón",
-      rating:"⭐⭐⭐",
-      comment:"Me gusto la atención"
-    }
-  ];
- 
-  // Itera sobre el array de objetos y crea el HTML para cada review
-  reviewsData.forEach((review, index )=> {
-      const id = `review${index + 1}`;
-      slideShow.insertAdjacentHTML("beforeend", cardReview(id, review.imgUrl, review.name, review.rating, review.comment));
+      return await reviews.reviews.forEach((review)=> {
+      const starsHTML = drawStar(review.rating);
+      slideShow.insertAdjacentHTML("beforeend", cardReview(review.id, review.image, review.name, starsHTML, review.body));
     });
-    // const cards = document.querySelectorAll(".card");
-    // if(cards.length > 0 ){
-    //   cards.forEach((elemnt)=>{
-    //     elemnt.addEventListener("click", (e)=>{
-    //       const comment = elemnt.querySelector(".text").textContent;
-    //       const imgUrl = elemnt.querySelector(".slideshow-img").src;
-    //       const rating = elemnt.querySelector(".rating").textContent;
+   
     
-    //       const review = {
-    //         comment: comment,
-    //         imagen: imgUrl,
-    //         rating: rating
-    //       }
-    //       const datos =  JSON.stringify(review)
-    //       const reviewCard = localStorage.setItem("review", datos);
-    //       const review1 = localStorage.getItem("review")
-    //       const comentario = JSON.parse(review1);
-    //       const comentarios = comentario.comment;
-    //       const imagen = comentario.imgUrl;
-    //       const rating1 = comentario.rating;
-
-    //     });
-    //   });
-    // }
-    const cards = document.querySelectorAll(".card");
-  if (cards.length > 0) {
-    cards.forEach((element) => {
-      element.addEventListener("click", (e) => {
-        const comment = element.querySelector(".text").textContent;
-        const imgUrl = element.querySelector(".slideshow-img").src;
-        const rating = element.querySelector(".rating").textContent;
-        
-        const review = {
-          comment: comment,
-          imagen: imgUrl,
-          rating: rating
-        };
-
-        // Guarda los datos de la opinión seleccionada en localStorage
-        localStorage.setItem("selectedReview", JSON.stringify(review));
-
-        // Llama a la función mostrarOpinion con los datos de la opinión seleccionada
-        mostrarOpinion(app, review.comment, review.imgUrl, review.rating);
-        mostrar(2)
-      });
-    });
-  }
-  
+}catch(e){
+  console.log(e)
 }
-
-export {cardReview, elements, reviews };
+}
+  function viewReviews(){
+    const cards = document.querySelectorAll(".card");
+    if (cards.length > 0) {
+      cards.forEach((element) => {
+        element.addEventListener("click", (e) => {
+          const comment = element.querySelector(".text").textContent;
+          const imgUrl = element.querySelector(".slideshow-img");
+          const stars = element.querySelector(".stars").textContent;
+         
+          const review = {
+            comment: comment,
+            imagen: imgUrl.src,
+            rating: stars
+          };
+          console.log(review.imagen)
+          // Guarda los datos de la opinión seleccionada en localStorage
+          localStorage.setItem("selectedReview", JSON.stringify(review));
+         
+          // Llama a la función mostrarOpinion con los datos de la opinión seleccionada
+          mostrarOpinion(app, review.comment, review.imagen, review.rating);
+          mostrar(2)
+        });
+      });
+      }
+  }
+export {cardReview, elements, reviews, viewReviews};
