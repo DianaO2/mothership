@@ -32,13 +32,15 @@ function elements(app) {
   const swiperWrapper = document.createElement("div");
   const btnNext = document.createElement("div");
   const btnPrev = document.createElement("div");
-  
+ 
+
   // Creación de clases
   section.classList.add("swiper");
   swiperWrapper.classList.add("swiper-wrapper");
   btnNext.classList.add("swiper-button-next");
   btnPrev.classList.add("swiper-button-prev");
   
+
   section.appendChild(swiperWrapper)
   section.appendChild(btnNext)
   section.appendChild(btnPrev)
@@ -52,10 +54,12 @@ async function reviews(){
     try{
       const response = await fetch("https://mocki.io/v1/b29fad5b-4d51-483a-a116-91880e9774cf")
       const reviews = await response.json();
-
+      localStorage.setItem("reviews", reviews.totalReviewCount)
       return await reviews.reviews.forEach((review)=> {
       const starsHTML = drawStar(review.rating);
       slideShow.insertAdjacentHTML("beforeend", cardReview(review.id, review.image, review.name, starsHTML, review.body));
+      console.log(reviews.length)
+     
     });
    
     
