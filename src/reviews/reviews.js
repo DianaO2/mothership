@@ -32,13 +32,15 @@ function elements(app) {
   const swiperWrapper = document.createElement("div");
   const btnNext = document.createElement("div");
   const btnPrev = document.createElement("div");
-  
+ 
+
   // Creación de clases
   section.classList.add("swiper");
   swiperWrapper.classList.add("swiper-wrapper");
   btnNext.classList.add("swiper-button-next");
   btnPrev.classList.add("swiper-button-prev");
   
+
   section.appendChild(swiperWrapper)
   section.appendChild(btnNext)
   section.appendChild(btnPrev)
@@ -52,10 +54,12 @@ async function reviews(){
     try{
       const response = await fetch("https://mocki.io/v1/b29fad5b-4d51-483a-a116-91880e9774cf")
       const reviews = await response.json();
-
+      localStorage.setItem("reviews", reviews.totalReviewCount)
       return await reviews.reviews.forEach((review)=> {
       const starsHTML = drawStar(review.rating);
       slideShow.insertAdjacentHTML("beforeend", cardReview(review.id, review.image, review.name, starsHTML, review.body));
+      console.log(reviews.length)
+     
     });
    
     
@@ -63,29 +67,42 @@ async function reviews(){
   console.log(e)
 }
 }
-  function viewReviews(){
-    const cards = document.querySelectorAll(".card");
-    if (cards.length > 0) {
-      cards.forEach((element) => {
-        element.addEventListener("click", (e) => {
-          const comment = element.querySelector(".text").textContent;
-          const imgUrl = element.querySelector(".slideshow-img");
-          const stars = element.querySelector(".stars").textContent;
-         
-          const review = {
-            comment: comment,
-            imagen: imgUrl.src,
-            rating: stars
-          };
-          console.log(review.imagen)
-          // Guarda los datos de la opinión seleccionada en localStorage
-          localStorage.setItem("selectedReview", JSON.stringify(review));
-         
-          // Llama a la función mostrarOpinion con los datos de la opinión seleccionada
-          mostrarOpinion(app, review.comment, review.imagen, review.rating);
-          mostrar(2)
-        });
-      });
+function viewReviews() {
+  const cards = document.querySelectorAll(".card");
+  let activeCard = null;
+
+  cards.forEach((card) => {
+    card.addEventListener("click", () => {
+      if (activeCard === card) return; // No hacer nada si la tarjeta ya está activa
+
+      const opinionContainer = document.querySelector('.container-card');
+      const templateContainer = document.querySelector('.containerPlantilla');
+      if (opinionContainer && templateContainer) {
+        opinionContainer.remove();
+        templateContainer.remove()
       }
-  }
+      if (activeCard) {
+        activeCard.classList.remove("active"); // Quitar clase activa de la tarjeta anterior
+      }
+
+      card.classList.add("active"); // Añadir clase activa a la nueva tarjeta
+      activeCard = card; // Actualizar la tarjeta activa
+
+      const comment = card.querySelector(".text").textContent;
+      const imgUrl = card.querySelector(".slideshow-img");
+      const stars = card.querySelector(".stars").textContent;
+
+      const review = {
+        comment: comment,
+        imagen: imgUrl.src,
+        rating: stars
+      };
+
+      localStorage.setItem("selectedReview", JSON.stringify(review));
+
+      mostrarOpinion(app, review.comment, review.imagen, review.rating);
+      mostrar(2);
+    });
+  });
+}
 export {cardReview, elements, reviews, viewReviews};
