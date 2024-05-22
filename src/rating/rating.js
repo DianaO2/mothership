@@ -10,7 +10,7 @@ export function mostrarRating (puntaje, app ){
     // logo de google
     const logoGoogle = document.createElement('img')
     logoGoogle.classList.add('logoGoggle')
-    logoGoogle.src = 'src/img/Google.svg'
+    logoGoogle.src = 'https://raw.githubusercontent.com/DianaO2/mothership/9fd7f29f25a986f9ae47d797acde21ab00e8344c/src/img/Google.svg'
 
     // contenedor del tìtulo, puntuacion y estrellas
     const containerPyE = document.createElement('div')
