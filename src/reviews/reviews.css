@@ -20,7 +20,7 @@ body, #app{
   flex-direction: column;
   flex-wrap: nowrap;
   align-items: center;
-  width: 291px;
+  width: 291.19px;
   height: 362.4px;
   justify-content: space-evenly;
   border: 1px solid white;
@@ -33,14 +33,25 @@ body, #app{
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
   gap: 16px;
+  line-height: 15.83px;
 }
 .text{
   color: #6A6A6A;
+  text-align: center;
+  font-size: 10.56px;
+}
+div.container-text > p:nth-child(2){
+  font-style: italic;
 }
 .link{
   text-decoration: none;
   color:#97509F;
+  line-height: 13.3px;
+  font-family:Plus Jakarta Sans;
+  font-weight: 400;
+  font-size: 10.56px;
 }
 .swiper-slide {
   display: flex;
@@ -50,8 +61,8 @@ body, #app{
 }
 .slideshow-img{
   border-radius: 50%;
-  width: 100px;
-  height: 100px;
+  width: 75.66px;
+  height: 75.66px;
   -webkit-border-radius: 50%;
   -moz-border-radius: 50%;
   -ms-border-radius: 50%;

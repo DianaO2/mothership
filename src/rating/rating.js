@@ -2,6 +2,9 @@ import './rating.css';
 
 
 export function mostrarRating (puntaje, app ){
+    const sectionRating = document.createElement("section")
+    sectionRating.classList.add("section-rating")
+
     const contenedorPrincipal= document.createElement('div')
     contenedorPrincipal.classList.add('contenedorRating')
     // logo de google
@@ -42,7 +45,8 @@ containerPyE.appendChild(containerNyImg)
 contenedorPrincipal.appendChild(logoGoogle)
 
 contenedorPrincipal.appendChild(containerPyE)
-app.appendChild(contenedorPrincipal)
+sectionRating.appendChild(contenedorPrincipal)
+app.appendChild(sectionRating)
 
 }
 

@@ -4,24 +4,23 @@
 
 .contenedorRating {
   border-block-start: 5px solid #34A853;
- 
-  height: 5.146px;
+  height: 126px;
   align-self: stretch;
   display: flex;
-   width: 350px; /*411.445px; valor en figma*/
+  width: 350px; /*411.445px; valor en figma*/
   height: 120.854px;
   padding: 20.586px 30.879px;
   justify-content:center;
   align-items: center;
   gap: 15.439px;
   box-sizing: border-box ;
-
   border-radius: 10.293px;
   background: #FFF;
   box-shadow: -5.146px -2.573px 20.586px 0px rgba(0, 0, 0, 0.08), 25.732px 18.013px 51.464px 0px rgba(0, 0, 0, 0.08);
-  margin-block-start: 30px; /*173 valor en figma */
-  margin-inline-start: 285px;
-  margin-block-end: 57px;
+ /* margin-block-start: 30px; /*173 valor en figma */
+ /* margin-inline-start: 285px;
+  margin-block-end: 57px; 
+  */
 }
 
 .logoGoggle{
@@ -38,8 +37,6 @@
 }
 
 .containerNyImg{
-  /* display: flex;
-  justify-content: space-between; */
   display: flex;
   align-items: center;
   
