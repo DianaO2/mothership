@@ -10,12 +10,11 @@ padding: 60.883px;
 flex-direction: column;
 align-items: center;
 gap: 13.837px;
-
 border-radius: 15.221px;
 background: var(--Color, #FFF);
 box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
 opacity: 0px;
-
+margin-bottom: 30px;
 }
 .contenedor-Principal{
 top: 779px;
@@ -30,8 +29,6 @@ display: flex;
 gap: 10px;
 }
 .card-respuesta{
-
-
 margin-bottom: 5%;
 }
 .imagen-tarjeta img {
@@ -54,12 +51,14 @@ opacity: 0px;
 align-items: flex-start;
 }
 
-.text {
+.text1 {
   font-family: Plus Jakarta Sans;
   font-size: 16.6px;
   font-weight: 400;
   line-height: 24.91px;
   text-align: left;
+  color: #6A6A6A;
+
   
 }
 
@@ -108,6 +107,7 @@ margin-top: 18px;
 margin-bottom: 10%;
 width: 140px;
 color: #FFFFFF;
+font-size: 17.28px;
 padding: 15.36px 26.88px 15.36px 26.88px;
 border-radius: 8px;
 background: #7F56D9;
@@ -119,6 +119,7 @@ margin-top: 18px;
 margin-bottom: 10% ;
 width: 140px;
 color: #344054;
+font-size: 19.37px;
 padding: 15.36px 26.88px 15.36px 26.88px;
 border-radius: 8px;
 background: #FFFFFF;

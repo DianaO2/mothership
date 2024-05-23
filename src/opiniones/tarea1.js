@@ -12,12 +12,12 @@ const cardReview = (
                </div>
           <div class="text-rating">
             <p class="img-estrella">${rating}</p>
-            <p class="text">${comentario}</p>
+            <p class="text1">${comentario}</p>
           </div> 
           </div> <br><br><br><br><br>
        <div class="cuadro">
        <div class="imagen-tarjeta">
-       <img src="src/imagen/2.jpeg" alt="foto de perfil"/>
+       <img src="https://github.com/DianaO2/mothership/blob/lesliee_reviews/src/imagen/2.jpeg?raw=true" alt="foto de perfil"/>
      </div>
      <div>
      <p>Nombre del emprendimiento</p>
