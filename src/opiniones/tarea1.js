@@ -20,8 +20,7 @@ const cardReview = (
        <img src="https://github.com/DianaO2/mothership/blob/lesliee_reviews/src/imagen/2.jpeg?raw=true" alt="foto de perfil"/>
      </div>
      <div>
-     <p>Nombre del emprendimiento</p>
-           
+     <p>Nombre del emprendimiento</p><br>
           <div class="responder"> 
             <div class="gracias-opinion"> 
             <p>Gracias por dejarnos tu opinión</p>
@@ -44,6 +43,8 @@ export function mostrarOpinion(app,comentario,imagen,rating){
   tarjeta.insertAdjacentHTML("beforeend", cardReview(comentario,imagen,rating))
 app.appendChild(tarjeta)
   }
+
+  
 
 
   
