@@ -1,8 +1,7 @@
 import './rating.css';
 
-export function mostrarRating (puntaje, app ){
-    const sectionRating = document.createElement("section")
-    sectionRating.classList.add("section-rating")
+export function mostrarRating (puntaje){
+    
 
     const contenedorPrincipal= document.createElement('div')
     contenedorPrincipal.classList.add('contenedorRating')
@@ -44,8 +43,9 @@ containerPyE.appendChild(containerNyImg)
 contenedorPrincipal.appendChild(logoGoogle)
 
 contenedorPrincipal.appendChild(containerPyE)
-sectionRating.appendChild(contenedorPrincipal)
-app.appendChild(sectionRating)
+
+const containerReviews = document.querySelector(".section-rating")
+containerReviews.appendChild(contenedorPrincipal)
 
 }
 
