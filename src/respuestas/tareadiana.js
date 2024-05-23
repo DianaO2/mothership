@@ -1,5 +1,5 @@
-
 export function mostrar (puntuacion){
+
     if (puntuacion >= 3){
         
         const divPlantilla = document.createElement('div');

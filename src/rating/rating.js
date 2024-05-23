@@ -1,6 +1,5 @@
 import './rating.css';
 
-
 export function mostrarRating (puntaje, app ){
     const sectionRating = document.createElement("section")
     sectionRating.classList.add("section-rating")
