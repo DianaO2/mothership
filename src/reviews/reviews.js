@@ -55,6 +55,7 @@ async function reviews(){
       const response = await fetch("https://mocki.io/v1/b29fad5b-4d51-483a-a116-91880e9774cf")
       const reviews = await response.json();
       localStorage.setItem("reviews", reviews.totalReviewCount)
+      localStorage.setItem("promedio", reviews.averageRating)
       return await reviews.reviews.forEach((review)=> {
       const starsHTML = drawStar(review.rating);
       slideShow.insertAdjacentHTML("beforeend", cardReview(review.id, review.image, review.name, starsHTML, review.body));
@@ -101,7 +102,8 @@ function viewReviews() {
       localStorage.setItem("selectedReview", JSON.stringify(review));
 
       mostrarOpinion(app, review.comment, review.imagen, review.rating);
-      mostrar(2);
+      mostrar(review.rating.length);
+      console.log(review.rating.length)
     });
   });
 }

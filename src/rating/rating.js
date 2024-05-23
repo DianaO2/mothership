@@ -1,6 +1,5 @@
 import './rating.css';
 
-
 export function mostrarRating (puntaje, app ){
     const sectionRating = document.createElement("section")
     sectionRating.classList.add("section-rating")
@@ -34,7 +33,7 @@ export function mostrarRating (puntaje, app ){
             for(let x = 1; x <= puntaje; x++){
                 const estrella = document.createElement('img')
                 estrella.classList.add('estrella')
-                estrella.src = 'src/img/Star.svg'
+                estrella.src = 'https://raw.githubusercontent.com/DianaO2/mothership/9fd7f29f25a986f9ae47d797acde21ab00e8344c/src/img/Star.svg'
                 containerNyImg.appendChild(estrella)
             }
         }else {
