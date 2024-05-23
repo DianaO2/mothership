@@ -1,5 +1,5 @@
-
 export function mostrar (puntuacion){
+
     if (puntuacion >= 3){
         
         const divPlantilla = document.createElement('div');
@@ -12,7 +12,7 @@ export function mostrar (puntuacion){
             listaDeRespuestas.textContent = respuesta;
             const imgcerrar = document.createElement('img');
             imgcerrar.classList.add('cerrar');
-            imgcerrar.src = "src/img/tag button.svg";
+            imgcerrar.src = "https://raw.githubusercontent.com/DianaO2/mothership/9fd7f29f25a986f9ae47d797acde21ab00e8344c/src/img/tag%20button.svg";
             listaDeRespuestas.appendChild(imgcerrar);
             listaOrdenada.appendChild(listaDeRespuestas)
      });

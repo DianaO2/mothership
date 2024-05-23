@@ -7,7 +7,8 @@ import { reviewsAll } from "./src/reviewsAll/reviewsAll.js";
 
 const app = document.getElementById('app');
 const totalReviews = localStorage.getItem("reviews")
-mostrarRating(4.8, app);
+const PromedioPuntos = localStorage.getItem("promedio")
+mostrarRating(PromedioPuntos, app);
 reviewsAll(totalReviews)
 elements(app);
 header(app)

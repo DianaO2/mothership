@@ -1,6 +1,5 @@
 import './rating.css';
 
-
 export function mostrarRating (puntaje, app ){
     const sectionRating = document.createElement("section")
     sectionRating.classList.add("section-rating")
@@ -10,7 +9,7 @@ export function mostrarRating (puntaje, app ){
     // logo de google
     const logoGoogle = document.createElement('img')
     logoGoogle.classList.add('logoGoggle')
-    logoGoogle.src = 'src/img/Google.svg'
+    logoGoogle.src = 'https://raw.githubusercontent.com/DianaO2/mothership/9fd7f29f25a986f9ae47d797acde21ab00e8344c/src/img/Google.svg'
 
     // contenedor del tìtulo, puntuacion y estrellas
     const containerPyE = document.createElement('div')
@@ -34,7 +33,7 @@ export function mostrarRating (puntaje, app ){
             for(let x = 1; x <= puntaje; x++){
                 const estrella = document.createElement('img')
                 estrella.classList.add('estrella')
-                estrella.src = 'src/img/Star.svg'
+                estrella.src = 'https://raw.githubusercontent.com/DianaO2/mothership/9fd7f29f25a986f9ae47d797acde21ab00e8344c/src/img/Star.svg'
                 containerNyImg.appendChild(estrella)
             }
         }else {
