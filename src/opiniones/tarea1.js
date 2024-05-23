@@ -5,6 +5,7 @@ const cardReview = (
   const card = `
   <div class="contenedor-Principal">
     <div class="contenedor-card">
+      <div class="card1">
       <div class="card-respuesta"
                <div class="imagen-tarjeta">
                  <img src=${imagen} alt="foto de perfil" class="slideshow-img"/>
@@ -12,12 +13,15 @@ const cardReview = (
           <div class="text-rating">
             <p class="img-estrella">${rating}</p>
             <p class="text">${comentario}</p>
+          </div> 
           </div> <br><br><br><br><br>
        <div class="cuadro">
        <div class="imagen-tarjeta">
        <img src="src/imagen/2.jpeg" alt="foto de perfil"/>
      </div>
-           <p>Nombre del emprendimiento</p>
+     <div>
+     <p>Nombre del emprendimiento</p>
+           
           <div class="responder"> 
             <div class="gracias-opinion"> 
             <p>Gracias por dejarnos tu opinión</p>
@@ -25,7 +29,8 @@ const cardReview = (
            <div class="responder-1">
             <button class="btn-responder">Responder</button>
             <button class="btn-cancelar">Cancelar</button>
-            </div>  
+            </div> 
+            </div> 
         </div>
       </div>
     </div> 

@@ -25,9 +25,13 @@ left: 218px;
 .contenedor-card {
 margin: 0 auto; 
 }
+.card1{
+display: flex;
+gap: 10px;
+}
 .card-respuesta{
-width: 40px;
-height: 60px;
+
+
 margin-bottom: 5%;
 }
 .imagen-tarjeta img {
@@ -43,11 +47,11 @@ flex-shrink: 0;
 .text-rating {
 display: flex;
 flex-direction: column;
-
 top: 67.8px;
 left: 159.13px;
 gap: 14.87px;
 opacity: 0px;
+align-items: flex-start;
 }
 
 .text {
@@ -60,7 +64,8 @@ opacity: 0px;
 }
 
 .cuadro{
-width: 80%;
+  display: flex;
+  gap: 10px;
 font-family: Montserrat;
 font-size: 19.37px;
 font-weight: 500;
