@@ -32,41 +32,52 @@ function elements(app) {
   const swiperWrapper = document.createElement("div");
   const btnNext = document.createElement("div");
   const btnPrev = document.createElement("div");
- 
+  const sectionRating = document.createElement("section")
+   
 
   // Creación de clases
   section.classList.add("swiper");
   swiperWrapper.classList.add("swiper-wrapper");
   btnNext.classList.add("swiper-button-next");
   btnPrev.classList.add("swiper-button-prev");
-  
+  sectionRating.classList.add("section-rating")
+
 
   section.appendChild(swiperWrapper)
   section.appendChild(btnNext)
   section.appendChild(btnPrev)
-
+  app.appendChild(sectionRating)
   const createApp = app.appendChild(section);
   return createApp;
 }
 
-async function reviews(){
-  const slideShow = document.querySelector(".swiper-wrapper");
+async function reviewsData(){
+  
     try{
       const response = await fetch("https://mocki.io/v1/b29fad5b-4d51-483a-a116-91880e9774cf")
       const reviews = await response.json();
-      localStorage.setItem("reviews", reviews.totalReviewCount)
-      localStorage.setItem("promedio", reviews.averageRating)
-      return await reviews.reviews.forEach((review)=> {
-      const starsHTML = drawStar(review.rating);
-      slideShow.insertAdjacentHTML("beforeend", cardReview(review.id, review.image, review.name, starsHTML, review.body));
-      console.log(reviews.length)
-     
-    });
-   
-    
-}catch(e){
+      return reviews;
+  
+  }catch(e){
   console.log(e)
 }
+}
+function viewCarousel (reviews){
+  const slideShow = document.querySelector(".swiper-wrapper");
+  return  reviews.reviews.forEach((review)=> {
+    const starsHTML = drawStar(review.rating);
+    slideShow.insertAdjacentHTML("beforeend", cardReview(review.id, review.image, review.name, starsHTML, review.body));
+  });
+}
+function uploadReviews() {
+  reviewsData()
+    .then((reviews) => {
+      viewCarousel(reviews);
+      viewReviews()
+    })
+    .catch((error) => {
+      console.error("Error cargando las opiniones:", error);
+    });
 }
 function viewReviews() {
   const cards = document.querySelectorAll(".card");
@@ -92,14 +103,13 @@ function viewReviews() {
       const comment = card.querySelector(".text").textContent;
       const imgUrl = card.querySelector(".slideshow-img");
       const stars = card.querySelector(".stars").textContent;
-
+      
+      console.log(comment, imgUrl, stars)
       const review = {
         comment: comment,
         imagen: imgUrl.src,
         rating: stars
       };
-
-      localStorage.setItem("selectedReview", JSON.stringify(review));
 
       mostrarOpinion(app, review.comment, review.imagen, review.rating);
       mostrar(review.rating.length);
@@ -107,4 +117,4 @@ function viewReviews() {
     });
   });
 }
-export {cardReview, elements, reviews, viewReviews};
+export {cardReview, elements, reviewsData, uploadReviews, viewReviews};

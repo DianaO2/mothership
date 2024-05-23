@@ -6,15 +6,25 @@ export function drawStar(rating) {
   for (let i = 0; i < maxRating; i++) {
       // Agrega una estrella completa al HTML
       if(rating == 1){
-        ratingStart = "⭐"
+        ratingStart = `<img src="../assets/imagenes/Star.png">`
       }else if(rating == 2){
-        ratingStart= "⭐⭐"
+        ratingStart= `<img src="../assets/imagenes/Star.png">       
+        <img src="../assets/imagenes/Star.png">`
       }else if(rating == 3){
-       ratingStart= "⭐⭐⭐"
+       ratingStart= `<img src="../assets/imagenes/Star.png">
+       <img src="../assets/imagenes/Star.png">
+       <img src="../assets/imagenes/Star.png">`
       }else if(rating == 4){
-        ratingStart= "⭐⭐⭐⭐"
+        ratingStart= `<img src="../assets/imagenes/Star.png">
+        <img src="../assets/imagenes/Star.png">
+        <img src="../assets/imagenes/Star.png">
+        <img src="../assets/imagenes/Star.png">`
       }else{
-        ratingStart = "⭐⭐⭐⭐⭐"
+        ratingStart = `<img src="../assets/imagenes/Star.png">
+        <img src="../assets/imagenes/Star.png">
+        <img src="../assets/imagenes/Star.png">
+        <img src="../assets/imagenes/Star.png">
+        <img src="../assets/imagenes/Star.png">`
       }
   }
   let star = document.querySelectorAll(".fa-star");
