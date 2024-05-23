@@ -10,6 +10,6 @@ export function reviewsAll(reseñas){
         <div class="review-text">Reseñas totales</div>
     <div class="review-count">${reseñas}</div>
 </div>`
-return container.insertAdjacentHTML("beforeend", card)
+return container.insertAdjacentHTML("afterend", card)
 
 }

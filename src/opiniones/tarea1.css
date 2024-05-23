@@ -1,6 +1,6 @@
 #app {
-  text-align: center; 
-  margin-top: 50px; /*Añade un margen superior para separar del borde superior */
+text-align: center; 
+margin-top: 50px; /*Añade un margen superior para separar del borde superior */
 }
 .container-card{
 display: flex;
@@ -40,7 +40,6 @@ justify-content: center;
 align-items: center;
 flex-shrink: 0;
 }
-
 .text-rating {
 display: flex;
 flex-direction: column;
@@ -50,21 +49,17 @@ gap: 14.87px;
 opacity: 0px;
 align-items: flex-start;
 }
-
 .text1 {
-  font-family: Plus Jakarta Sans;
-  font-size: 16.6px;
-  font-weight: 400;
-  line-height: 24.91px;
-  text-align: left;
-  color: #6A6A6A;
-
-  
+font-family: Plus Jakarta Sans;
+font-size: 16.6px;
+font-weight: 400;
+line-height: 24.91px;
+text-align: left;
+color: #6A6A6A;
 }
-
 .cuadro{
-  display: flex;
-  gap: 10px;
+display: flex;
+gap: 10px;
 font-family: Montserrat;
 font-size: 19.37px;
 font-weight: 500;
@@ -101,17 +96,22 @@ line-height: 33.21px;
 text-align: left;
 color: #667085;
 }
-
 .btn-responder{
+background-color: #FFFFFF;
+border: none;
+color: #344054;
 margin-top: 18px; 
 margin-bottom: 10%;
 width: 140px;
-color: #FFFFFF;
 font-size: 17.28px;
 padding: 15.36px 26.88px 15.36px 26.88px;
 border-radius: 8px;
-background: #7F56D9;
-border: 0.96px solid #7F56D9
+cursor: pointer;
+transition-duration: 0.4s;
+}
+.btn-responder:hover{
+  background-color: #7f56d9;
+  color: #FFFFFF;
 }
 
 .btn-cancelar{
@@ -119,11 +119,17 @@ margin-top: 18px;
 margin-bottom: 10% ;
 width: 140px;
 color: #344054;
-font-size: 19.37px;
+font-size: 17.28px;
 padding: 15.36px 26.88px 15.36px 26.88px;
 border-radius: 8px;
-background: #FFFFFF;
-border: 0.96px solid #FFFFFF
+background-color: #FFFFFF;
+border: none;
+cursor: pointer;
+transition-duration: 0.4s;
+}
+.btn-cancelar:hover{
+  background-color: #7f56d9;
+  color: #FFFFFF;
 }
 
 

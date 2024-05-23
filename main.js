@@ -1,36 +1,28 @@
-import {elements, reviews, viewReviews} from "./src/reviews/reviews.js";
-import {initializeSwiperComponent} from "./src/reviews/carrusel.js"
+import {
+  elements,
+  reviewsData,
+  uploadReviews,
+} from "./src/reviews/reviews.js";
+import { initializeSwiperComponent } from "./src/reviews/carrusel.js";
 import { header } from "./src/header/header.js";
 import { mostrarRating } from "./src/rating/rating.js";
 import { reviewsAll } from "./src/reviewsAll/reviewsAll.js";
 
-
-const app = document.getElementById('app');
-const totalReviews = localStorage.getItem("reviews")
-const PromedioPuntos = localStorage.getItem("promedio")
-mostrarRating(PromedioPuntos, app);
-reviewsAll(totalReviews)
-elements(app);
-header(app)
+const app = document.getElementById("app");
 // Creación de los elementos del DOM
+elements(app);
+header(app);
 
-// Llama a la función reviews después de haber agregado los elementos al DOM
-const opiniones = document.getElementById("opiniones");
-
-opiniones.addEventListener("click", ()=>{
-    reviews()
-  .then(() => {
-    // Llama a viewReviews después de cargar las tarjetas
-    viewReviews();
-  })
-  .catch((error) => {
-    console.error("Error cargando las revisiones:", error);
+window.addEventListener("load", () => {
+  reviewsData().then((reviews) => {
+    mostrarRating(reviews.averageRating);
+    reviewsAll(reviews.totalReviewCount);
   });
 });
-
-initializeSwiperComponent();
-
-
-
-
-
+// Llama a la función reviews después de haber agregado los elementos al DOM
+const opiniones = document.getElementById("opiniones");
+opiniones.addEventListener("click", () => {
+  uploadReviews(); // Cargar las revisiones y crear el carrusel
+  initializeSwiperComponent(); // Inicializar el carrusel
+  
+});
