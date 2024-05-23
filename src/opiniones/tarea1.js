@@ -12,7 +12,7 @@ const cardReview = (
                </div>
           <div class="text-rating">
             <p class="img-estrella">${rating}</p>
-            <p class="text">${comentario}</p>
+            <p class="text1">${comentario}</p>
           </div> 
           </div> <br><br><br><br><br>
        <div class="cuadro">
