@@ -3,22 +3,19 @@
   margin: 0;
 }
 
-/* #containerMenssage{
-  border: 2px solid  rgb(221, 214, 214);
-  margin-block-start: 30px;
-  margin-block-end: 50px;;
-} */
-
+.containerPlantilla{
+ 
+  margin-inline-start: 243px;
+  margin-inline-end: 286px;
+  margin-block-start: 45px ;
+}
 .containerLi{
-/* estilos del border radius */
-  
   display:inline-flex;
   border-radius: 65px;
   border: 1px solid #8A6DFF;
-  margin-block-start: 8px;
+  margin-block-start: 15px;
   list-style: none;
-  /* estilos del texto */
-   padding: 5px;
+  padding: 5px;
   color: #5D00B9; 
   font-family: Ubuntu;
   font-size: 14px;
@@ -27,6 +24,6 @@
   line-height: 20px; 
   letter-spacing: -0.14px;
   text-align: center;
- }
+}
 
 
