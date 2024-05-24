@@ -14,7 +14,9 @@ const cardReview = (
               <div class="container-img-nombre">
                   <img src=${src} alt="foto de perfil" class="slideshow-img"/>
               </div>
-                <span class="stars">${estrellas}</span>
+              <div class="fa-star">
+                  ${estrellas}
+                </div>
               <div class="container-text">
                 <p class="text">${texto}</p>
                 <p class="text">from: ${nombre}</p>
@@ -73,13 +75,13 @@ function uploadReviews() {
   reviewsData()
     .then((reviews) => {
       viewCarousel(reviews);
-      viewReviews()
+      viewReviews(reviews.reviews)
     })
     .catch((error) => {
       console.error("Error cargando las opiniones:", error);
     });
 }
-function viewReviews() {
+function viewReviews(reviews) {
   const cards = document.querySelectorAll(".card");
   let activeCard = null;
 
@@ -99,21 +101,23 @@ function viewReviews() {
 
       card.classList.add("active"); // Añadir clase activa a la nueva tarjeta
       activeCard = card; // Actualizar la tarjeta activa
-
+      console.log(reviews)
       const comment = card.querySelector(".text").textContent;
       const imgUrl = card.querySelector(".slideshow-img");
-      const stars = card.querySelector(".stars").textContent;
-      
-      console.log(comment, imgUrl, stars)
+      const stars = card.querySelectorAll(".fa-star img");
       const review = {
         comment: comment,
         imagen: imgUrl.src,
-        rating: stars
+        star: []
+        
       };
-
-      mostrarOpinion(app, review.comment, review.imagen, review.rating);
-      mostrar(review.rating.length);
-      console.log(review.rating.length)
+        const rating = stars.forEach((item)=>{
+          review.star.push(item.src)
+        })
+         // Crear el HTML para las estrellas
+      const starsHTML = drawStar(review.star.length);
+      mostrarOpinion(app, review.comment, review.imagen, starsHTML);
+      mostrar(reviews.totalReviewCount);      
     });
   });
 }
