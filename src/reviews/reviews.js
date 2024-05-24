@@ -117,7 +117,7 @@ function viewReviews(reviews) {
          // Crear el HTML para las estrellas
       const starsHTML = drawStar(review.star.length);
       mostrarOpinion(app, review.comment, review.imagen, starsHTML);
-      mostrar(reviews.totalReviewCount);      
+      mostrar(review.star.length);      
     });
   });
 }
