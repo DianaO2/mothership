@@ -7,87 +7,122 @@
   height: 126px;
   align-self: stretch;
   display: flex;
-  width: 350px; /*411.445px; valor en figma*/
+  width: 350px;
+  /*411.445px; valor en figma*/
   height: 120.854px;
   padding: 20.586px 30.879px;
-  justify-content:center;
+  justify-content: center;
   align-items: center;
   gap: 15.439px;
-  box-sizing: border-box ;
+  box-sizing: border-box;
   border-radius: 10.293px;
   background: #FFF;
   box-shadow: -5.146px -2.573px 20.586px 0px rgba(0, 0, 0, 0.08), 25.732px 18.013px 51.464px 0px rgba(0, 0, 0, 0.08);
 }
 
-.logoGoggle{
+.logoGoggle {
   width: 80.413px;
   height: 80.413px;
   flex-shrink: 0;
 }
 
-.containerEstrellas{
+.containerEstrellas {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   gap: 10.293px;
 }
 
-.containerNyImg{
+.containerNyImg {
   display: flex;
   align-items: center;
-  
+
 }
 
 .tituloGoogle {
-  color:  #6A6A6A;
+  color: #6A6A6A;
   text-align: center;
   font-family: "Plus Jakarta Sans";
   font-size: 20.586px;
   font-style: normal;
   font-weight: 700;
-  line-height: 20.586px; /* 100% */
+  line-height: 20.586px;
+  /* 100% */
 }
 
-.puntos{
+.puntos {
   color: #FEA500;
   text-align: center;
   font-family: Plus Jakarta Sans;
   font-size: 30.879px;
   font-style: normal;
   font-weight: 800;
-  line-height: 30.879px; /* 100% */
+  line-height: 30.879px;
+  /* 100% */
   margin-inline-end: 20.59px;
 }
 
-.estrella{
+.estrella {
   width: 36.025px;
   height: 36.025px;
 }
-@media screen and (max-width: 576px){
-  .contenedorRating{
-      width: 50%;
-  }
-  .logoGoggle{
-    width:50px;
-    height:50px;
-  }
-.containerEstrellas{
-  gap: 10px;
-}
-.tituloGoogle{
-  font-size: 16px;
-}
-.puntos {
-  font-size: 18px;
-}
-.estrella{
-  width: 20px;
-  height: 20px;
-}
-}
-@media screen and (max-width: 768px){
-  
-}
-@media screen and (max-width: 1225px){
 
+@media screen and (max-width: 576px) {
+  .contenedorRating {
+    width: 50%;
+    padding: 10px;
+  }
+
+  .logoGoggle {
+    width: 50px;
+    height: 50px;
+  }
+
+  .containerEstrellas {
+    gap: 10px;
+  }
+
+  .tituloGoogle {
+    font-size: 16px;
+  }
+
+  .puntos {
+    font-size: 18px;
+  }
+
+  .estrella {
+    width: 20px;
+    height: 20px;
+  }
 }
+
+@media screen and (max-width: 768px) {
+  .contenedorRating {
+    width: 50%;
+    padding: 10px;
+  }
+
+  .logoGoggle {
+    width: 50px;
+    height: 50px;
+  }
+
+  .containerEstrellas {
+    gap: 10px;
+  }
+
+  .tituloGoogle {
+    font-size: 16px;
+  }
+
+  .puntos {
+    font-size: 18px;
+  }
+
+  .estrella {
+    width: 20px;
+    height: 20px;
+  }
+}
+
+@media screen and (max-width: 1225px) {}

@@ -2,7 +2,13 @@
 *{
   margin: 0;
 }
-
+body{
+  width: 100vw;
+  height: 100vh;
+}
+#app{
+  height: 100vh;
+}
 .containerPlantilla{
  
   margin-inline-start: 243px;
