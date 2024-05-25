@@ -17,10 +17,6 @@
   border-radius: 10.293px;
   background: #FFF;
   box-shadow: -5.146px -2.573px 20.586px 0px rgba(0, 0, 0, 0.08), 25.732px 18.013px 51.464px 0px rgba(0, 0, 0, 0.08);
- /* margin-block-start: 30px; /*173 valor en figma */
- /* margin-inline-start: 285px;
-  margin-block-end: 57px; 
-  */
 }
 
 .logoGoggle{
@@ -66,4 +62,32 @@
 .estrella{
   width: 36.025px;
   height: 36.025px;
+}
+@media screen and (max-width: 576px){
+  .contenedorRating{
+      width: 50%;
+  }
+  .logoGoggle{
+    width:50px;
+    height:50px;
+  }
+.containerEstrellas{
+  gap: 10px;
+}
+.tituloGoogle{
+  font-size: 16px;
+}
+.puntos {
+  font-size: 18px;
+}
+.estrella{
+  width: 20px;
+  height: 20px;
+}
+}
+@media screen and (max-width: 768px){
+  
+}
+@media screen and (max-width: 1225px){
+
 }

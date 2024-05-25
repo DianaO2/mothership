@@ -42,3 +42,31 @@
     font-weight: bold;
     color: #2b2b2b;
 }
+@media screen and (max-width: 576px){
+    .section-rating{
+        width: auto;
+
+    }
+    .review-card{
+        width: 50%;
+        
+    }
+    
+}
+@media screen and (max-width: 768px){
+    .section-rating{
+        width: auto;
+        padding: 10px;
+
+    }
+    .review-card{
+        width: 50%;
+        
+    }
+    .review-text{
+        font-size: 16px;
+    }
+    .review-count{
+        font-size: 18px;
+    }
+}
