@@ -4,11 +4,8 @@
 }
 body{
   width: 100vw;
-  height: 100vh;
 }
-#app{
-  height: 100vh;
-}
+
 .containerPlantilla{
  
   margin-inline-start: 243px;
@@ -33,3 +30,16 @@ body{
 }
 
 
+@media screen and (max-width: 576px){
+  .containerPlantilla{
+    margin: 0;
+    padding: 20px;
+  }
+}
+@media screen and (max-width: 800px){
+  .containerPlantilla{
+    margin: 0;
+    padding: 20px;
+  }
+  
+}
