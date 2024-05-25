@@ -29,14 +29,13 @@ body{
   text-align: center;
 }
 
-
-@media screen and (max-width: 576px){
+@media screen and  (min-width: 340px) and (max-width: 600px){
   .containerPlantilla{
     margin: 0;
     padding: 20px;
   }
 }
-@media screen and (max-width: 800px){
+@media screen and  (min-width: 601px) and (max-width: 1024px){
   .containerPlantilla{
     margin: 0;
     padding: 20px;
