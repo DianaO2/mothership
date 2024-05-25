@@ -28,13 +28,13 @@ export function initializeSwiperComponent() {
         },
       // when window width is >= 480px
         480: {
-        slidesPerView: 1,
+        slidesPerView: 2,
         spaceBetween: 30,
         },
       // when window width is >= 640px
-        640: {
+        765: {
         slidesPerView: 3,
-        spaceBetween: 40,
+        spaceBetween: 20,
         },
     },
   });

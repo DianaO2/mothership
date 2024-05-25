@@ -2,6 +2,9 @@
 *{
   margin: 0;
 }
+body{
+  width: 100vw;
+}
 
 .containerPlantilla{
  
@@ -26,4 +29,16 @@
   text-align: center;
 }
 
-
+@media screen and  (min-width: 340px) and (max-width: 600px){
+  .containerPlantilla{
+    margin: 0;
+    padding: 20px;
+  }
+}
+@media screen and  (min-width: 601px) and (max-width: 1024px){
+  .containerPlantilla{
+    margin: 0;
+    padding: 20px;
+  }
+  
+}
