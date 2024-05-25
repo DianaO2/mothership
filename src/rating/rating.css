@@ -67,7 +67,37 @@
   height: 36.025px;
 }
 
-@media screen and (max-width: 576px) {
+@media screen and  (min-width: 300px) and (max-width: 600px){
+  .contenedorRating {
+    width: 50%;
+    padding: 10px;
+  }
+
+  .logoGoggle {
+    width: 30px;
+    height: 30px;
+  }
+
+  .containerEstrellas {
+    gap: 10px;
+  }
+
+  .tituloGoogle {
+    font-size: 16px;
+  }
+
+  .puntos {
+    font-size: 16px;
+    margin: 0;
+  }
+
+  .estrella {
+    width: 18px;
+    height: 18px;
+  }
+}
+
+@media screen and  (min-width: 601px) and (max-width: 1024px){
   .contenedorRating {
     width: 50%;
     padding: 10px;
@@ -95,34 +125,3 @@
     height: 20px;
   }
 }
-
-@media screen and (max-width: 768px) {
-  .contenedorRating {
-    width: 50%;
-    padding: 10px;
-  }
-
-  .logoGoggle {
-    width: 50px;
-    height: 50px;
-  }
-
-  .containerEstrellas {
-    gap: 10px;
-  }
-
-  .tituloGoogle {
-    font-size: 16px;
-  }
-
-  .puntos {
-    font-size: 18px;
-  }
-
-  .estrella {
-    width: 20px;
-    height: 20px;
-  }
-}
-
-@media screen and (max-width: 1225px) {}

@@ -103,14 +103,14 @@ header {
 .dropdown:hover .dropdown-content {
     display: block;
 }
-@media screen and  (min-width: 340px) and (max-width: 600px){
+@media screen and  (min-width: 300px) and (max-width: 600px){
     header{
         width: 100%;
-
+        padding-top: 20px ;
     }
     .navbar{
         width: 100%;
-        
+        padding: 0;
     }
     .logo {
         width: 100px;

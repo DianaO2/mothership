@@ -69,3 +69,15 @@ div.container-text > p:nth-child(2){
   -o-border-radius: 50%;
 }
 
+@media screen and  (min-width: 300px) and (max-width: 600px){
+  .swiper-slide-active{
+    margin-right: 0;
+  }
+
+}
+@media screen and  (min-width: 601px) and (max-width: 1024px){
+  .swiper-slide-active{
+    margin-right: 0;
+
+  }
+}
