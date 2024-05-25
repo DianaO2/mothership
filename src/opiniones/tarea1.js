@@ -21,7 +21,7 @@ const cardReview = (
        <div class="imagen-tarjeta">
        <img src="https://github.com/DianaO2/mothership/blob/lesliee_reviews/src/imagen/2.jpeg?raw=true" alt="foto de perfil"/>
      </div>
-     <div>
+     <div class="container-respuesta">
      <p>Nombre del emprendimiento</p><br>
           <div class="responder"> 
             <div class="gracias-opinion"> 

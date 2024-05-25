@@ -24,16 +24,18 @@ export function initializeSwiperComponent() {
       // when window width is >= 320px
         320: {
         slidesPerView: 1,
+        slidesPerGroup: 1,
         spaceBetween: 20,
         },
       // when window width is >= 480px
-        480: {
-        slidesPerView: 1,
+        640: {
+        slidesPerView: 2,
         spaceBetween: 30,
         },
       // when window width is >= 640px
-        640: {
+        840: {
         slidesPerView: 3,
+        slidesPerGroup: 3,
         spaceBetween: 40,
         },
     },

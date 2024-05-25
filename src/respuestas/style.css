@@ -2,6 +2,9 @@
 *{
   margin: 0;
 }
+body{
+  width: 100vw;
+}
 
 .containerPlantilla{
  
@@ -27,3 +30,16 @@
 }
 
 
+@media screen and (max-width: 576px){
+  .containerPlantilla{
+    margin: 0;
+    padding: 20px;
+  }
+}
+@media screen and (max-width: 800px){
+  .containerPlantilla{
+    margin: 0;
+    padding: 20px;
+  }
+  
+}

@@ -138,3 +138,77 @@ transition-duration: 0.4s;
 }
 
 
+@media screen and (max-width: 576px){
+  .container-card{
+      width: 100%;
+      margin: 0;
+      padding: 10px;
+  }
+  .contenedor-Principal{
+      width: 100%;
+      
+  }
+  .cuadro{
+    width: 100%;
+  }
+  .card-respuesta img, .imagen-tarjeta img{
+    width: 50px;
+    height: 50px;
+  }
+  .container-respuesta{
+    width: 80%;
+  }
+  .container-respuesta p{
+    font-size: 10.56px;
+  }
+  .text-rating{
+    padding: 10px;
+  }
+  .text1{
+    font-size: 10.56px;
+  }
+  .responder-1{
+    display: flex;
+    flex-direction: row;
+  }
+  .responder-1 button{
+    font-size: 10.56px;
+  }
+}
+@media screen and (max-width: 800px){
+  .container-card{
+    width: 100%;
+    margin: 0;
+    padding: 10px;
+}
+.contenedor-Principal{
+    width: 100%;
+    
+}
+.cuadro{
+  width: 100%;
+}
+.card-respuesta img, .imagen-tarjeta img{
+  width: 50px;
+  height: 50px;
+}
+.container-respuesta{
+  width: 80%;
+}
+.container-respuesta p{
+  font-size: 10.56px;
+}
+.text-rating{
+  padding: 10px;
+}
+.text1{
+  font-size: 10.56px;
+}
+.responder-1{
+  display: flex;
+  flex-direction: row;
+}
+.responder-1 button{
+  font-size: 10.56px;
+}
+}
