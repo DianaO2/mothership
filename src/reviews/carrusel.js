@@ -22,14 +22,15 @@ export function initializeSwiperComponent() {
     },
     breakpoints: {
       // when window width is >= 320px
-        320: {
+        300: {
         slidesPerView: 1,
         spaceBetween: 20,
         },
       // when window width is >= 480px
         480: {
         slidesPerView: 2,
-        spaceBetween: 30,
+        slidesPerGroup: 2,
+        spaceBetween: 20,
         },
       // when window width is >= 640px
         765: {

@@ -19,7 +19,6 @@ margin-bottom: 30px;
 .contenedor-Principal{
 top: 779px;
 left: 218px;
-
 }
 .contenedor-card {
 margin: 0 auto; 
@@ -75,16 +74,23 @@ gap: 8.3px;
 opacity: 0px;
 box-shadow: 0px 1.38px 2.77px 0px #1018280D;
 }
-.gracias-opinion{
-padding: 13.84px 19.37px 13.84px 19.37px;
-gap: 11.07px;
-border-radius: 10px 10px 10px 10px;
-opacity: 0px;
-background: #FFFFFF;
-border: 1.38px solid #D0D5DD;
-box-shadow: 0px 1.38px 2.77px 0px #1018280D;
+
+#gracias-opinion{
+  width:635.13px;
+  height:176.79px;
+  padding: 13.84px 19.37px 13.84px 19.37px;
+  border-radius: 10px;
+  border: 1.38px 0px 0px 0px;
+  opacity: 0px;
+  background: #FFFFFF;
+  border: 1.38px solid #D0D5DD;
+  box-shadow: 0px 1.38px 2.77px 0px #1018280D;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
 }
-.gracias-opinion >p{
+input[type="text"] {
 width: 596.38px;
 height: 149.12px;
 gap: 0px;
@@ -92,9 +98,14 @@ opacity: 0px;
 font-family: Montserrat;
 font-size: 22.14px;
 font-weight: 400;
-line-height: 33.21px;
+line-height: 149px;
 text-align: left;
 color: #667085;
+}
+input[type="text"]::placeholder {
+  position: relative;
+  top: -50px; 
+  color: #a0a5ad; 
 }
 .btn-responder{
 background-color: #FFFFFF;
@@ -138,7 +149,7 @@ transition-duration: 0.4s;
 }
 
 
-@media screen and  (min-width: 340px) and (max-width: 600px){
+@media screen and  (min-width: 300px) and (max-width: 600px){
   .container-card{
       width: 100%;
       margin: 0;
@@ -173,6 +184,12 @@ transition-duration: 0.4s;
   }
   .responder-1 button{
     font-size: 10.56px;
+  }
+  input[type="text"]::placeholder {
+    font-size: 10.56px;
+  }
+  #gracias-opinion{
+    width: 100%;
   }
 }
 @media screen and  (min-width: 601px) and (max-width: 1024px){
@@ -209,6 +226,9 @@ transition-duration: 0.4s;
   flex-direction: row;
 }
 .responder-1 button{
+  font-size: 10.56px;
+}
+input[type="text"]::placeholder {
   font-size: 10.56px;
 }
 }
