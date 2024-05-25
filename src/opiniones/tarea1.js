@@ -24,8 +24,7 @@ const cardReview = (
      <div class="container-respuesta">
      <p>Nombre del emprendimiento</p><br>
           <div class="responder"> 
-            <div class="gracias-opinion"> 
-            <p>Gracias por dejarnos tu opinión</p>
+            <input type="text" name="nombre" id="gracias-opinion" placeholder="Gracias por dejarnos tu opinión">
           </div> 
            <div class="responder-1">
             <button class="btn-responder">Responder</button>
@@ -44,6 +43,8 @@ export function mostrarOpinion(app,comentario,imagen,rating){
   tarjeta.classList.add("container-card")
   tarjeta.insertAdjacentHTML("beforeend", cardReview(comentario,imagen,rating))
 app.appendChild(tarjeta)
+
+
   }
 
   
