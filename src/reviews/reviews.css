@@ -29,6 +29,9 @@ body, #app{
   box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.5);
   
 }
+.card:hover{
+  cursor: pointer;
+}
 .container-text{
   display: flex;
   flex-direction: column;

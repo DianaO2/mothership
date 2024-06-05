@@ -11,9 +11,6 @@ export function initializeSwiperComponent() {
     slidesPerGroup: 3,
     spaceBetween: 0,
     centeredSlides:true,
-    mousewheel: {
-        invert: true,
-    },
     // Navigation arrows
     navigation: {
         nextEl: ".swiper-button-next",
@@ -27,10 +24,10 @@ export function initializeSwiperComponent() {
         spaceBetween: 20,
         },
       // when window width is >= 480px
-        480: {
+        500: {
         slidesPerView: 2,
         slidesPerGroup: 2,
-        spaceBetween: 20,
+      
         },
       // when window width is >= 640px
         765: {

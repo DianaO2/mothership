@@ -28,7 +28,9 @@ body{
   letter-spacing: -0.14px;
   text-align: center;
 }
-
+.containerLi:hover{
+  cursor: pointer;
+}
 @media screen and  (min-width: 300px) and (max-width: 600px){
   .containerPlantilla{
     margin: 0;

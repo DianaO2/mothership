@@ -11,9 +11,9 @@ export function drawStar(rating) {
         ratingStart= `<img src="https://raw.githubusercontent.com/DianaO2/mothership/main/src/assets/imagenes/Star.png">       
         <img src="https://raw.githubusercontent.com/DianaO2/mothership/main/src/assets/imagenes/Star.png">`
       }else if(rating == 3){
-       ratingStart= `<img src="https://raw.githubusercontent.com/DianaO2/mothership/main/src/assets/imagenes/Star.png">
-       <img src="https://raw.githubusercontent.com/DianaO2/mothership/main/src/assets/imagenes/Star.png">
-       <img src="https://raw.githubusercontent.com/DianaO2/mothership/main/src/assets/imagenes/Star.png">`
+        ratingStart= `<img src="https://raw.githubusercontent.com/DianaO2/mothership/main/src/assets/imagenes/Star.png">
+        <img src="https://raw.githubusercontent.com/DianaO2/mothership/main/src/assets/imagenes/Star.png">
+        <img src="https://raw.githubusercontent.com/DianaO2/mothership/main/src/assets/imagenes/Star.png">`
       }else if(rating == 4){
         ratingStart= `<img src="https://raw.githubusercontent.com/DianaO2/mothership/main/src/assets/imagenes/Star.png">
         <img src="https://raw.githubusercontent.com/DianaO2/mothership/main/src/assets/imagenes/Star.png">
